@@ -3,9 +3,9 @@ import ProductItem from './ProductItem'
 
 const ProductList = ({productList}) => {
   return (
-    <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 bg-inherit p-10'>
+    <div className='w-full grid place-items-center grid-cols-2 md:grid-cols-3 xl:grid-cols-4 py-10 gap-2 sm:gap-3'>
         {productList.map(item=>(
-            <ProductItem product={item} key={item.id} />
+            <ProductItem product={item} key={item.id} className='hover:shadow-2xl' />
         ))}
     </div>
   )

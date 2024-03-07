@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductList from './ProductList'
 import ProductApis from '../_utils/ProductApis'
+import ProductModels from './ProductModels'
 
 const ProductSection = () => {
     const [productList, setProductList] = useState([])
@@ -17,7 +18,8 @@ const ProductSection = () => {
         })
     }
   return (
-    <div className='px-10 md:px-20 bg-white'>
+    <div className='bg-gray-200 lg:flex'>
+        <ProductModels  productList={productList} />
         <ProductList productList={productList} />
     </div>
   )
