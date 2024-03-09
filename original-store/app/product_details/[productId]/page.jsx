@@ -5,37 +5,40 @@ import ProductApis from '@/app/_utils/ProductApis'
 import React, { useEffect, useState } from 'react'
 import ProductBanner from './_components/ProductBanner'
 import ProductInfo from './_components/ProductInfo'
+import Loading from './Loading'
 
 const productDetails = ({params}) => {
 
     const [ productDetails, setProductDetails ] = useState({})
+    let [ isLoading, setIsLoading ] = useState(true)
     useEffect( () => {
-        setTimeout(() => {
             getProductById_()
-        }, 3000)
     }, [params?.productId])
 
     const getProductById_ = () => {
         ProductApis.getProductById(params?.productId).then(res=>{
             console.log('Product Item: ', res.data.data)
-            setProductDetails(res.data.data)
+            setTimeout(() => {
+                setProductDetails(res?.data?.data)
+                setIsLoading(false)
+            }, 3000)
         })
     }
 
   return (
     <div>
         <BreadCrumb />
-        <div className='flex flex-wrap gap-2 w-full bg-white'>
-            <div className='p-4 h-full lg:w-1/2 w-full'>
+        <div className='flex justify-center flex-wrap gap-2 w-full bg-gray-200'>
+            <div className='p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]'>
 
-                <div className='rounded text-black shadow-xl my-5 p-4'>
-                    <h5>Marke</h5>
-                    <h2>Model</h2>
-                    <p>referenz nummer</p>
+                <div className='rounded text-black bg-white shadow-2xl my-4 p-4'>
+                    <h5 className='text-sm'>Marke</h5>
+                    <h2 className='text-xl font-extrabold'>Model</h2>
+                    <p className='text-sm text-gray-600'>referenz nummer</p>
                 </div>
-                <ProductBanner product={productDetails} />
+                <ProductBanner product={productDetails} isLoading={isLoading} />
 
-                <div>
+                <div className='text-black rounded my-4 p-4 bg-white shadow-2xl'>
                     Beschreibung & Eigenschaften
                 </div>
                 {/* <div>

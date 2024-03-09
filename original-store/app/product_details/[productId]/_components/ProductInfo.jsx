@@ -2,7 +2,10 @@ import React from "react";
 
 const ProductInfo = ({ product }) => {
   return (
-    <div className="flex flex-col justify-between text-black text-lg bg-sky-300 flex-1 py-4 px-8 border-2 border-red-400 min-h-60 h-full w-1/2">
+    <div className="flex flex-col justify-between text-black text-lg bg-gray-200 
+                    flex-1 py-4 px-8 
+                    border-2 border-red-400 min-h-60 h-full w-1/2 
+                    xl:max-w-[580px]">
 
       <div className="relative">
         <details className="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden absolute top-0 left-0 w-full">
@@ -64,7 +67,7 @@ const ProductInfo = ({ product }) => {
         </details>
       </div>
 
-      <div className="rounded text-md bg-gray-300 w-full h-fit flex justify-between px-4 py-3 mt-10">
+      <div className="rounded text-md bg-white w-full h-fit flex justify-between px-4 py-3 mt-10">
 
         <div className="flex justify-center items-center gap-6 text-md">
           <span>Logo </span>
