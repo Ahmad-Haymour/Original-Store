@@ -54,6 +54,9 @@
     },
     "marke": {
       "type": "string"
+    },
+    "model": {
+      "type": "string"
     }
   }
 }

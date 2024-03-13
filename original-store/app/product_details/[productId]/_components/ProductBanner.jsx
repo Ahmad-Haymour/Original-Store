@@ -1,61 +1,79 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductCarousel from "./ProductCarousel";
 import Loading from "../Loading";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProductBanner = ({ product, isLoading }) => {
-  const gallery = [
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-    product?.attributes?.image?.data?.attributes?.url,
-  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0),
+  [mainImage, setMainImage] = useState(null)
+  [gallery, setGallery] = useState(null)  
 
-  // const [ mainImage, setMainImage ] = useState(product?.attributes?.image?.data?.attributes?.url)
-  const [ mainImage, setMainImage ] = useState(gallery[0])
+  const prevSlide = ()=> {
+    const isFirstSlide = currentImageIndex === 0
+    const newIndex = isFirstSlide ? gallery.length - 1 : currentImageIndex -1
+    setCurrentImageIndex(newIndex)
+  },
+  nextSlide = ()=> {
+    const isLastSlide = currentImageIndex === gallery.length -1
+    const newIndex = isLastSlide ? 0 : currentImageIndex + 1
+    setCurrentImageIndex(newIndex)
+  };
 
-  if(isLoading) return <Loading/>
+  useEffect(() => {
+    if (product?.attributes?.image?.data?.attributes?.url) {
+      setMainImage(product.attributes.image.data.attributes.url);
+    }
+    if (product?.attributes?.gallery?.data) {
+      setGallery(product?.attributes?.gallery?.data);
+    }
+  }, [product]);
+
+  if (isLoading) return <Loading />;
 
   return (
     <div
       className="flex justify-center lg:justify-start items-center flex-1
-                    overflow-hidden rounded bg-white 
-                    h-full sm:h-[380px] md:h-[340px]" 
+                 rounded bg-white shadow-2xl h-full sm:h-[380px] md:h-[340px]"
     >
-      {/* H 53 , W 80 */}
-      <div 
-        className="rounded h-[200px] sm:h-[340px] bg-red-300 
-                  flex flex-col items-start divide-y-4
-                  overflow-y-scroll scrollbar-thin scrollbar-thumb-green-400 scrollbar-track-blue-100"
-      >
-        {gallery.map((img) => (
-          <Image
-            src={img}
-            className="object-cover"
-            alt="Banner"
-            width={78}
-            height={78}
-            key={img}
-            onClick={()=>setMainImage(img)}
-          />
-        ))}
+      <div className="rounded h-[200px] sm:h-[340px] flex-initial flex flex-col items-start divide-y-4 overflow-auto">
+        {product &&
+          product?.attributes?.gallery?.data?.map((img) => (
+            <Image
+              // src={img?.attributes?.url}
+              src={img?.attributes?.url}
+              className="object-cover rounded cursor-pointer grayscale 
+                         hover:grayscale-0 hover:scale-90"
+              alt="Banner"
+              width={78}
+              height={78}
+              key={img}
+              onClick={() => setMainImage(img?.attributes?.url)}
+            />
+          ))}
       </div>
-        <div className="relative rounded-lg 
-                        sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px]
-                        object-fit p-4 flex justify-center">
+      {gallery[currentImageIndex].attributes.url ? (
+        <div
+          className="object-fit relative p-4 flex justify-centerrelative rounded-lg
+                      sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
+        >
           <Image
-            // src={product?.attributes?.image?.data?.attributes?.url}
-            src={mainImage && mainImage}
-            className="object-cover w-full"
+            // src={mainImage}
+            src={gallery[currentImageIndex].attributes.url}
+            className="object-cover w-full group-hover:scale-125 hover:shadow-2xl hover:z-50
+                     transition duration-500 cursor-pointer "
             alt="Banner_1"
             layout="fill"
             objectFit="cover"
           />
+          <div className="relative w-full">
+            <ChevronRight size={30} onClick={prevSlide} className="hidden group-hover:block absolute top-[50%] -end-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-50 group-hover:scale-125" />
+            <ChevronLeft size={30} onClick={nextSlide} className="hidden group-hover:block absolute top-[50%] -start-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-50 group-hover:scale-125" />
+          </div>
         </div>
+      ) : (
+        <h1>Image Loading..</h1>
+      )}
     </div>
   );
 };

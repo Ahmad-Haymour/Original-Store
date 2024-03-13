@@ -383,6 +383,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     color: Attribute.String;
     size: Attribute.Integer;
     marke: Attribute.String;
+    model: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
