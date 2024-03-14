@@ -1,16 +1,34 @@
 import React, { useState } from "react";
 
 const ProductInfo = ({ product }) => {
-  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedSizes, setSelectedSizes] = useState([]);
 
   const handleSizeClick = (size) => {
-    setSelectedSize(size);
+    setSelectedSizes((prev) => prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size] );
   };
+
+  const sizeElements = [...Array(15)].map((_, index) => {
+    const size = index + 34;
+    const isSelected = selectedSizes.includes(size);
+    return (
+      <li
+        key={size}
+        className={`h-7 w-7 cursor-pointer text-sm border-2 rounded grid place-items-center ${
+          isSelected
+            ? "bg-primary text-white hover:bg-none"
+            : "border-gray-200 bg-white hover:bg-gray-400"
+        } cursor-pointer`}
+        onClick={() => handleSizeClick(size)}
+      >
+        {size}
+      </li>
+    );
+  });
 
   return (
     <div
       className="flex flex-col justify-between text-black text-lg bg-gray-100 
-                 flex-1 p-8 rounded min-h-60 h-full w-1/2 xl:max-w-[580px] border-2 border-red-400"
+                 flex-1 p-8 rounded min-h-60 h-full w-1/2 xl:max-w-[580px]"
     >
       <div className="relative rounded shadow-xl">
         <details className="overflow-hidden rounded border shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden absolute top-0 left-0 w-full">
@@ -40,51 +58,11 @@ const ProductInfo = ({ product }) => {
               EU Sizes
             </h5>
             <ul className="border-t border-gray-200 p-4 flex flex-wrap gap-2">
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                36
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                37
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                38
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                39
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                40
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                41
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                42
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                43
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                44
-              </li>
-              <li className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-                45
-              </li>
+              {sizeElements}
             </ul>
           </div>
         </details>
       </div>
-      {/* 
-      <div className="rounded text-md bg-white w-full h-fit flex justify-between px-4 py-3 mt-28 shadow-2xl">
-
-        <div className="flex justify-center items-center gap-6 text-md">
-          <span>Logo </span>
-          <span>{product?.attributes?.price} €</span>
-        </div>
-        <button className="border-2 border-gray-400 bg-secondary rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md">
-          Zum Shop
-        </button>
-      </div> */}
 
       <div>
         <div className="rounded text-md bg-white w-full h-fit flex justify-between px-4 py-3 mt-28 shadow-2xl">
@@ -93,60 +71,54 @@ const ProductInfo = ({ product }) => {
             <span>{product?.attributes?.price} €</span>
           </div>
 
-          <button className="border-2 border-gray-400 bg-primary text-white rounded py-2 px-4 
-                             hover:shadow-lg hover:bg-gray-400 text-md">
+          <button
+            className="border-2 border-gray-400 bg-purple text-white rounded py-2 px-4 
+                             hover:shadow-lg hover:bg-gray-400 text-md"
+          >
             Zum Shop
           </button>
         </div>
-        <div className="flex flex-wrap gap-1 py-6 px-4 my-4 rounded bg-white border-2 border-green-400 shadow-2xl">
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            36
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            37
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            38
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            39
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            40
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            41
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            42
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            43
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            44
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            45
-          </div>
-          <div className="h-7 w-7 cursor-pointer hover:bg-gray-200 text-sm border-2 border-gray-400 rounded grid place-items-center">
-            46
-          </div>
-        </div>
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+          {sizeElements}
+        </ul>
+      </div>
 
-        <div className="flex flex-wrap">
-          {[36, 37, 38, 39, 40, 41].map((size) => (
-            <button
-              key={size}
-              className={`p-2 m-1 border ${
-                selectedSize === size ? "bg-blue-500 text-white" : ""
-              }`}
-              onClick={() => handleSizeClick(size)}
-            >
-              {size}
-            </button>
-          ))}
+      <div className="my-4">
+        <div className="rounded text-md bg-white w-full h-fit flex justify-between px-4 py-3 shadow-2xl">
+          <div className="flex justify-center items-center gap-6 text-md">
+            <span>Nike </span>
+            <span>{product?.attributes?.price} €</span>
+          </div>
+
+          <button
+            className="border-2 border-gray-400 bg-darkPurple text-white rounded py-2 px-4 
+                             hover:shadow-lg hover:bg-gray-400 text-md"
+          >
+            Zum Shop
+          </button>
         </div>
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+          {sizeElements}
+        </ul>
+      </div>
+
+      <div className="my-4">
+        <div className="rounded text-md bg-white w-full h-fit flex justify-between px-4 py-3 shadow-2xl">
+          <div className="flex justify-center items-center gap-6 text-md">
+            <span>Snipe </span>
+            <span>{product?.attributes?.price} €</span>
+          </div>
+
+          <button
+            className="border-2 border-gray-400 bg-primary text-white rounded py-2 px-4 
+                             hover:shadow-lg hover:bg-gray-400 text-md"
+          >
+            Zum Shop
+          </button>
+        </div>
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+          {sizeElements}
+        </ul>
       </div>
     </div>
   );

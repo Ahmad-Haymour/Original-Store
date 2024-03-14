@@ -24,9 +24,10 @@ const productDetails = ({ params }) => {
 
   return (
     <div>
-      <BreadCrumb />
       <div className="flex justify-center flex-wrap gap-2 w-full bg-white">
         <div className="p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]">
+        <BreadCrumb />
+
           <div className="rounded text-black bg-white shadow-2xl my-4 p-4">
             <h5 className="text-xs">{productDetails?.attributes?.marke}</h5>
             <h2 className="text-xl font-extrabold py-1">
