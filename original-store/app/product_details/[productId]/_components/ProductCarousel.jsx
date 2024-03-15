@@ -1,20 +1,57 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const ProductCarousel = ({ product }) => {
+const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) => {
+  [gallery, setGallery] = useState(0);
+
+  const prevSlide = () => {
+      const isFirstSlide = currentImageIndex === 0;
+      const newIndex = isFirstSlide
+        ? gallery.length - 1
+        : currentImageIndex - 1;
+      setCurrentImageIndex(newIndex);
+    },
+    nextSlide = () => {
+      const isLastSlide = currentImageIndex === gallery.length - 1;
+      const newIndex = isLastSlide ? 0 : currentImageIndex + 1;
+      setCurrentImageIndex(newIndex);
+    };
+
+  useEffect(() => {
+    if (product?.attributes?.gallery?.data) {
+      setGallery(product?.attributes?.gallery?.data);
+    }
+  }, [product]);
+
   return (
-      <div className="relative w-full">
-        <div className="p-4 rounded-lg bg-green-400">
-          <div className="">
-            <Image
-              src={product?.attributes?.image?.data?.attributes?.url}
-              className="block w-full h-full"
-              alt="Banner_1"
-              width={500}
-              height={480}
+    <div>
+      {gallery[currentImageIndex]?.attributes?.url ? (
+        <div
+          className="object-fit relative p-4 flex justify-centerrelative rounded-lg
+                      sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
+        >
+          <Image
+            src={gallery[currentImageIndex].attributes.url}
+            className="object-cover w-full group-hover:scale-125 hover:shadow-2xl hover:z-50
+                     transition duration-500 cursor-pointer "
+            alt="Banner_1"
+            layout="fill"
+            objectFit="cover"
+          />
+          <div className="relative w-full">
+            <ChevronLeft
+              onClick={prevSlide}
+              className="hidden group-hover:block absolute top-[50%] -start-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-50 group-hover:scale-125 size-6 md:size-8"
+            />
+            <ChevronRight
+              onClick={nextSlide}
+              className="hidden group-hover:block absolute top-[50%] -end-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-50 group-hover:scale-125 size-6 md:size-8"
             />
           </div>
         </div>
+      ) : (
+        <h1>Image Loading..</h1>
+      )}
     </div>
   );
 };

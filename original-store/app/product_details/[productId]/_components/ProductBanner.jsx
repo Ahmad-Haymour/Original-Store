@@ -2,27 +2,28 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Loading from "../Loading";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ProductCarousel from "./ProductCarousel";
 
 const ProductBanner = ({ product, isLoading }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0),
-  [gallery, setGallery] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  // [gallery, setGallery] = useState(0);
 
-  const prevSlide = ()=> {
-    const isFirstSlide = currentImageIndex === 0
-    const newIndex = isFirstSlide ? gallery.length - 1 : currentImageIndex -1
-    setCurrentImageIndex(newIndex)
-  },
-  nextSlide = ()=> {
-    const isLastSlide = currentImageIndex === gallery.length -1
-    const newIndex = isLastSlide ? 0 : currentImageIndex + 1
-    setCurrentImageIndex(newIndex)
-  };
+  // const prevSlide = ()=> {
+  //   const isFirstSlide = currentImageIndex === 0
+  //   const newIndex = isFirstSlide ? gallery.length - 1 : currentImageIndex -1
+  //   setCurrentImageIndex(newIndex)
+  // },
+  // nextSlide = ()=> {
+  //   const isLastSlide = currentImageIndex === gallery.length -1
+  //   const newIndex = isLastSlide ? 0 : currentImageIndex + 1
+  //   setCurrentImageIndex(newIndex)
+  // };
 
-  useEffect(() => {
-    if (product?.attributes?.gallery?.data) {
-      setGallery(product?.attributes?.gallery?.data);
-    }
-  }, [product]);
+  // useEffect(() => {
+  //   if (product?.attributes?.gallery?.data) {
+  //     setGallery(product?.attributes?.gallery?.data);
+  //   }
+  // }, [product]);
 
   if (isLoading) return <Loading />;
 
@@ -46,7 +47,8 @@ const ProductBanner = ({ product, isLoading }) => {
             />
           ))}
       </div>
-      {gallery[currentImageIndex]?.attributes?.url ? (
+      <ProductCarousel product={product} currentImageIndex={currentImageIndex} setCurrentImageIndex={setCurrentImageIndex} />
+      {/* {gallery[currentImageIndex]?.attributes?.url ? (
         <div
           className="object-fit relative p-4 flex justify-centerrelative rounded-lg
                       sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
@@ -66,7 +68,7 @@ const ProductBanner = ({ product, isLoading }) => {
         </div>
       ) : (
         <h1>Image Loading..</h1>
-      )}
+      )} */}
     </div>
   );
 };

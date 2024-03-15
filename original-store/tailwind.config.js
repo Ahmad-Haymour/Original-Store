@@ -19,7 +19,9 @@ module.exports = {
         secondary: "#474F7A",
         elementary: "#a46ede",
         purple: "#6B46C1",
-        darkPurple: "#8A2BE2"
+        darkPurple: "#8A2BE2",
+        lightPurple: "#BA55D3",
+        newPurple: "#4f0561",
       }
     },
   },

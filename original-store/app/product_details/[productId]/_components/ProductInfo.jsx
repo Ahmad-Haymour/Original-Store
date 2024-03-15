@@ -73,7 +73,7 @@ const ProductInfo = ({ product }) => {
 
           <button
             className="border-2 border-gray-400 bg-purple text-white rounded py-2 px-4 
-                             hover:shadow-lg hover:bg-gray-400 text-md"
+                       hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
@@ -92,7 +92,7 @@ const ProductInfo = ({ product }) => {
 
           <button
             className="border-2 border-gray-400 bg-darkPurple text-white rounded py-2 px-4 
-                             hover:shadow-lg hover:bg-gray-400 text-md"
+                       hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
@@ -110,8 +110,8 @@ const ProductInfo = ({ product }) => {
           </div>
 
           <button
-            className="border-2 border-gray-400 bg-primary text-white rounded py-2 px-4 
-                             hover:shadow-lg hover:bg-gray-400 text-md"
+            className="border-2 border-gray-400 bg-lightPurple text-white rounded py-2 px-4 
+                       hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
@@ -120,6 +120,25 @@ const ProductInfo = ({ product }) => {
           {sizeElements}
         </ul>
       </div>
+      <div className="my-4">
+        <div className="rounded text-md bg-white w-full h-fit flex justify-between px-4 py-3 shadow-2xl">
+          <div className="flex justify-center items-center gap-6 text-md">
+            <span>Lacoste</span>
+            <span>{product?.attributes?.price} €</span>
+          </div>
+
+          <button
+            className="border-2 border-gray-400 bg-newPurple text-white rounded py-2 px-4 
+                       hover:shadow-lg hover:bg-gray-400 text-md"
+          >
+            Zum Shop
+          </button>
+        </div>
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+          {sizeElements}
+        </ul>
+      </div>
+
     </div>
   );
 };
