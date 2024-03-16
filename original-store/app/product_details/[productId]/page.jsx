@@ -17,8 +17,8 @@ const productDetails = ({ params }) => {
   const getProductById_ = () => {
     ProductApis.getProductById(params?.productId).then((res) => {
       console.log("Product Item: ", res.data.data);
-        setProductDetails(res?.data?.data);
-        setIsLoading(false);
+      setProductDetails(res?.data?.data);
+      setIsLoading(false);
     });
   };
 
@@ -26,7 +26,7 @@ const productDetails = ({ params }) => {
     <div>
       <div className="flex justify-center flex-wrap gap-2 w-full bg-white">
         <div className="p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]">
-        <BreadCrumb />
+          <BreadCrumb />
 
           <div className="rounded text-black bg-white shadow-2xl my-4 p-4">
             <h5 className="text-xs">{productDetails?.attributes?.marke}</h5>
@@ -42,7 +42,7 @@ const productDetails = ({ params }) => {
 
           <div className="text-black rounded my-4 bg-white shadow-2xl">
             <div className="relative rounded shadow-xl">
-              <details className="overflow-hidden rounded border shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden w-full">
+              <details className="overflow-hidden rounded border-y shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden w-full">
                 <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
                   <span className="text-lg font-semibold">Beschreibung: </span>
 
@@ -65,7 +65,7 @@ const productDetails = ({ params }) => {
                 </summary>
 
                 <div className="border-t border-gray-300 bg-white py-2 px-4">
-                  <h5 className="font-extralight text-gray-600 text-md text-left py-2">
+                  <h5 className="font-extralight text-gray-600 text-sm text-left py-2">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Sequi, a non! Dolorum exercitationem blanditiis fugiat
                     placeat libero numquam earum facere a corrupti architecto
@@ -75,7 +75,7 @@ const productDetails = ({ params }) => {
               </details>
             </div>
             <div className="relative rounded shadow-xl">
-              <details className="overflow-hidden rounded border shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden w-full">
+              <details className="overflow-hidden rounded border-y shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden w-full">
                 <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
                   <span className="text-lg font-semibold">Eigenschaften: </span>
 
@@ -97,8 +97,8 @@ const productDetails = ({ params }) => {
                   </span>
                 </summary>
 
-                <div className="border-t border-gray-300 bg-white py-2 px-4">
-                  <h5 className="font-extralight text-left text-sm text-gray-500 py-2">
+                <div className="border-y-2 border-gray-300 bg-white py-2 px-4">
+                  <h5 className="font-extralight text-left text-sm text-gray-600 py-2">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Sequi, a non! Dolorum exercitationem blanditiis fugiat
                     placeat libero numquam earum facere a corrupti architecto

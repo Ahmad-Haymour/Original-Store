@@ -18,13 +18,15 @@ const ProductItem = ({ product }) => {
           className="absolute inset-0 h-[124px] sm:h-[170px] w-full object-cover opacity-100 group-hover:opacity-0 rounded-t-lg "
         />
 
-        <Image
-          src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80"
+        { product?.attributes?.gallery?.data &&
+          <Image
+          // src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80"
+          src={product?.attributes?.gallery?.data[1]?.attributes?.url || ''}
           alt="Main card"
           width={170}
           height={170}
           className="absolute inset-0 h-[124px] sm:h-[170px] w-full object-cover opacity-0 group-hover:opacity-100 rounded-t-lg "
-        />
+        />}
 
         <Heart className="absolute top-3 right-2 text-red-500" />
       </div>

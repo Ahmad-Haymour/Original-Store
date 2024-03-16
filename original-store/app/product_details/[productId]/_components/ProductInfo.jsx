@@ -15,8 +15,8 @@ const ProductInfo = ({ product }) => {
         key={size}
         className={`h-7 w-7 cursor-pointer text-sm border-2 rounded grid place-items-center ${
           isSelected
-            ? "bg-primary text-white hover:bg-none"
-            : "border-gray-200 bg-white hover:bg-gray-400"
+            ? "bg-newPurple text-white hover:bg-none"
+            : "border-gray-200 bg-white hover:bg-purple hover:text-white"
         } cursor-pointer`}
         onClick={() => handleSizeClick(size)}
       >

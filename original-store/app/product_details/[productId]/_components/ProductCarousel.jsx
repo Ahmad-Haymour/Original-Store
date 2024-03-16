@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) => {
-  [gallery, setGallery] = useState(0);
+  const [gallery, setGallery] = useState(0);
 
   const prevSlide = () => {
       const isFirstSlide = currentImageIndex === 0;
@@ -24,16 +25,15 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
   }, [product]);
 
   return (
-    <div>
-      {gallery[currentImageIndex]?.attributes?.url ? (
+      gallery[currentImageIndex]?.attributes?.url ? (
         <div
-          className="object-fit relative p-4 flex justify-centerrelative rounded-lg
+          className="object-fit relative p-4 flex justify-center rounded-lg
                       sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
         >
           <Image
             src={gallery[currentImageIndex].attributes.url}
             className="object-cover w-full group-hover:scale-125 hover:shadow-2xl hover:z-50
-                     transition duration-500 cursor-pointer "
+                     transition-transform duration-500 cursor-pointer "
             alt="Banner_1"
             layout="fill"
             objectFit="cover"
@@ -51,8 +51,7 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
         </div>
       ) : (
         <h1>Image Loading..</h1>
-      )}
-    </div>
+      )
   );
 };
 
