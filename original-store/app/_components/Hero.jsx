@@ -13,19 +13,19 @@ const Hero = () => {
 
           <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
             Perfect Fit. Perfect Sneakers. Discover shoes in your size and
-            style. We search over 60 stores to find you the best price!
+            style. We search over many stores to find you the best price!
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              className="block w-full rounded border border-blue-600 bg-primary px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+              className="block w-full rounded hover:border border-purple bg-purple px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
               href="#"
             >
               Get Started
             </a>
 
             <a
-              className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+              className="block w-full rounded border border-purple px-12 py-3 text-sm font-medium text-white hover:bg-purple focus:outline-none focus:ring active:bg-purple sm:w-auto"
               href="#"
             >
               Learn More

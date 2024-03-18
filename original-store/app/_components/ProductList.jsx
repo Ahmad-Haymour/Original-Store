@@ -3,7 +3,9 @@ import ProductItem from "./ProductItem";
 
 const ProductList = ({ productList }) => {
   return (
-      <div className="w-full grid place-items-center grid-cols-2 md:grid-cols-3 xl:grid-cols-4 py-10 gap-2 sm:gap-3">
+    <div className="bg-slate-400">
+      
+      <div className="w-full flex justify-center items-start bg-slate-500 flex-wrap px-2 py-10 md:gap-6 gap-4">
         {productList.map((item) => (
           <ProductItem
             product={item}
@@ -12,6 +14,7 @@ const ProductList = ({ productList }) => {
           />
         ))}
       </div>
+    </div>
   );
 };
 

@@ -18,7 +18,7 @@ const ProductSection = () => {
         })
     }
   return (
-    <div className='bg-gray-200 lg:flex'>
+    <div className='bg-gray-700 lg:flex py-16 sm:px-4'>
         <ProductModels  productList={productList} />
         <ProductList productList={productList} />
     </div>
