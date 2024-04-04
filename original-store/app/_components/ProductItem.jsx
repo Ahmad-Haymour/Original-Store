@@ -7,7 +7,8 @@ const ProductItem = ({ product }) => {
   return (
     <Link
       href={`/product_details/${product?.id}`}
-      className="group hover:shadow-2xl bg-white overflow-hidden cursor-pointer w-40 h-56 sm:w-60 sm:h-72 text-black rounded-lg"
+      className="group hover:shadow-2xl bg-white overflow-hidden cursor-pointer 
+                 w-40 sm:w-52 h-56 sm:h-72 text-black rounded-lg"
     >
       <div className="relative h-[124px] sm:h-[170px] top-0 overflow-hidden">
         <Image
