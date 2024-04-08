@@ -5,6 +5,8 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  mode: 'jit',
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -22,6 +24,15 @@ module.exports = {
         darkPurple: "#8A2BE2",
         lightPurple: "#BA55D3",
         newPurple: "#4f0561",
+
+        light: {
+          primary: '#FFFFFF',
+          // Add more light mode colors as needed
+        },
+        dark: {
+          primary: '#333333',
+          // Add more dark mode colors as needed
+        },
       }
     },
   },

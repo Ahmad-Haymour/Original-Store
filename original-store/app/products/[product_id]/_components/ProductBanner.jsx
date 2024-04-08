@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import Loading from "../Loading";
-import ProductCarousel from "./ProductCarousel";
+// import Loading from "../Loading";
+// import ProductCarousel from "./ProductCarousel";
 
 const ProductBanner = ({ product, isLoading }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  if (isLoading) return <Loading />
+  // if (isLoading) return <Loading />
 
   return (
     <div
@@ -29,11 +29,11 @@ const ProductBanner = ({ product, isLoading }) => {
           ))}
       </div>
 
-      <ProductCarousel
+      {/* <ProductCarousel
         product={product}
         currentImageIndex={currentImageIndex}
         setCurrentImageIndex={setCurrentImageIndex}
-      />
+      /> */}
     </div>
   );
 };

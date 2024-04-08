@@ -3,11 +3,12 @@ import React from "react";
 const Loading = () => {
   return (
     <div
-      role="status"
-      className="h-[450px] bg-gray-300 grid place-items-center"
+      className="h-[75vh] w-full bg-gray-600 grid place-items-center z-50"
     >
+                  {/* <h1 className="bg-blue-700 text-xl font-semibold">Here is Loading component </h1> */}
+
       <svg
-        ariaHidden="true"
+        aria-hidden="true"
         className="inline w-10 h-10 text-black animate-spin dark:text-white fill-darkPurple"
         viewBox="0 0 100 101"
         fill="none"

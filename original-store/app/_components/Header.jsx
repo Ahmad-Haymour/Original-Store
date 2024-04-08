@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import DarkModeToggle from "./DarkModeToggle";
 
 const Header = () => {
   return (
@@ -55,8 +56,9 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-
-          <div className="flex items-center gap-4">
+          <DarkModeToggle />
+          <h1 className="dark:text-red-700 dark:bg-blue-500 text-green-500">Hello</h1>
+          <div className="flex items-center gap-4 dark:bg-light-primary">
             <div className="sm:flex sm:gap-4">
               <a
                 className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 dark:hover:bg-secondary"

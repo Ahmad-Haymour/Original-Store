@@ -11,23 +11,35 @@ const productDetails = ({ params }) => {
   const [productDetails, setProductDetails] = useState({});
   let [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
+    console.log("Effect triggered with productId:", params?.productId);
+
     getProductById_();
   }, [params?.productId]);
 
   const getProductById_ = () => {
+    setIsLoading(true);
+    console.log("IS Loading ? ", isLoading);
     ProductApis.getProductById(params?.productId).then((res) => {
       console.log("Product Item: ", res.data.data);
       setProductDetails(res?.data?.data);
-      setIsLoading(false);
+      setTimeout( () =>{
+        setIsLoading(false);
+        console.log("IS Loading ? ", isLoading);
+
+      }, 3000)
     });
   };
 
   return (
     <div>
-      <div className="flex justify-center flex-wrap gap-2 w-full bg-white">
+      <div className="flex justify-center flex-wrap gap-2 w-full bg-violet-400 dark:bg-dark-primary">
         <div className="p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]">
           <BreadCrumb />
+            <h1 className="bg-red-700 text-xl font-semibold">Here is Loading component {isLoading}</h1>
+          {
+            !isLoading ?
 
+          <>
           <div className="rounded text-black bg-white shadow-2xl my-4 p-4">
             <h5 className="text-xs">{productDetails?.attributes?.marke}</h5>
             <h2 className="text-xl font-extrabold py-1">
@@ -39,7 +51,10 @@ const productDetails = ({ params }) => {
           </div>
 
           <ProductBanner product={productDetails} isLoading={isLoading} />
-
+          </>
+          :
+          <Loading/>
+          }
           <div className="text-black rounded my-4 bg-white shadow-2xl">
             <div className="relative rounded shadow-xl">
               <details className="overflow-hidden rounded border-y shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden w-full">
