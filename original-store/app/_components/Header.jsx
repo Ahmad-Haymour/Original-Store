@@ -4,7 +4,7 @@ import DarkModeToggle from "./DarkModeToggle";
 
 const Header = () => {
   return (
-    <header className="bg-white dark:bg-gray-900">
+    <header className="bg-white dark:bg-purple7">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <Image src='/logo.svg' alt="Logo" width={150} height={150} />
         <div className="flex flex-1 items-center justify-end md:justify-between">
@@ -57,18 +57,23 @@ const Header = () => {
             </ul>
           </nav>
           <DarkModeToggle />
-          <h1 className="dark:text-red-700 dark:bg-blue-500 text-green-500">Hello</h1>
-          <div className="flex items-center gap-4 dark:bg-light-primary">
+          <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
               <a
-                className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 dark:hover:bg-secondary"
+                className="block rounded-md bg-newPurple px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700 dark:hover:bg-secondary"
+                href="#"
+              >
+                Login
+              </a>
+              <a
+                className="block rounded-md bg-secondary px-5 py-2.5 text-sm font-medium text-white transition hover:bg-purple dark:hover:bg-purple"
                 href="#"
               >
                 Login
               </a>
 
               <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
+                className="hidden rounded-md bg-purple2 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block dark:bg-purple3 dark:text-white dark:hover:text-white/75"
                 href="#"
               >
                 Register
