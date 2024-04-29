@@ -25,7 +25,7 @@ const ProductsFilter = ({ products }) => {
         </button>
       </div>
 
-      <div className="relative p-4 flex w-full flex-wrap items-stretch">
+      <div className="relative py-4 px-2 flex w-full flex-wrap items-stretch">
               <input
                   type="search"
                   className="relative m-0 block flex-auto rounded border-2 border-neutral-600 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-newPurple focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-newPurple"
@@ -51,10 +51,10 @@ const ProductsFilter = ({ products }) => {
               </span>
           </div>
 
-      <div className="rounded shadow-xl bg-white p-4 flex gap-6">
+      <div className="rounded shadow-xl bg-light-background dark:bg-dark-background py-4 mx-2 flex gap-6">
         <details className="relative rounded border shadow-xl border-white [&_summary::-webkit-details-marker]:hidden inline-block">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-white px-4 py-2 text-gray-900 transition">
-            <h4 className="text-md font-medium">Gender</h4>
+          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray-600 transition">
+            <h4 className="text-md font-medium">Fashion</h4>
 
             <span className="transition group-open:-rotate-180">
               <svg
@@ -73,7 +73,7 @@ const ProductsFilter = ({ products }) => {
               </svg>
             </span>
           </summary>
-          <div className="border-t text-black rounded-md border-gray-200 bg-slate-100 absolute top-14 left-4 z-50 shadow-2xl">
+          <div className="border-t text-black rounded-md border-gray-200 absolute top-14 left-4 z-50 shadow-2xl">
             <ul className="border-t border-gray-200 p-4 flex flex-wrap gap-6 ">
               <li className="p-2 border-2 rounded cursor-pointer hover:bg-slate-700 shadow-xl hover:text-white border-slate-600 w-20 text-center">
                 Men
@@ -88,7 +88,7 @@ const ProductsFilter = ({ products }) => {
           </div>
         </details>
         <details className="relative rounded border shadow-xl border-white [&_summary::-webkit-details-marker]:hidden inline-block">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-white px-4 py-2 text-gray-900 transition">
+          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray-900 transition">
             <h4 className="text-md font-medium">Marke</h4>
 
             <span className="transition group-open:-rotate-180">
@@ -108,7 +108,7 @@ const ProductsFilter = ({ products }) => {
               </svg>
             </span>
           </summary>
-          <div className="border-t text-black rounded-md border-gray-200 bg-slate-100 absolute top-14 left-4 z-50 shadow-2xl">
+          <div className="border-t text-black rounded-md border-gray-200 absolute top-14 left-4 z-50 shadow-2xl">
             <ul className="border-t border-gray-200 p-4 flex flex-wrap gap-6 ">
               <li className="p-2 border-2 rounded cursor-pointer hover:bg-slate-600 hover:text-white border-slate-600 w-20 text-center">
                 Puma
@@ -123,7 +123,7 @@ const ProductsFilter = ({ products }) => {
           </div>
         </details>
         <details className="relative rounded border shadow-xl border-white [&_summary::-webkit-details-marker]:hidden inline-block">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-white px-4 py-2 text-gray-900 transition">
+          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray-900 transition">
             <h4 className="text-md font-medium">Color</h4>
 
             <span className="transition group-open:-rotate-180">
@@ -143,7 +143,7 @@ const ProductsFilter = ({ products }) => {
               </svg>
             </span>
           </summary>
-          <div className="border-t text-black rounded-md border-gray-200 bg-slate-100 absolute top-14 left-4 z-50 shadow-2xl">
+          <div className="border-t text-black rounded-md border-gray-200 absolute top-14 left-4 z-50 shadow-2xl">
             <ColorPicker />
           </div>
         </details>

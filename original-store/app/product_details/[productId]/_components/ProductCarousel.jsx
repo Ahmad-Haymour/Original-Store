@@ -32,8 +32,8 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
         >
           <Image
             src={gallery[currentImageIndex].attributes.url}
-            className="object-cover w-full group-hover:scale-125 hover:shadow-2xl hover:z-50
-                     transition-transform duration-500 cursor-pointer "
+            className="object-cover group-hover:scale-125 hover:shadow-2xl hover:z-50
+                     transition-transform duration-500 cursor-pointer h-auto w-auto"
             alt="Banner_1"
             layout="fill"
             objectFit="cover"
