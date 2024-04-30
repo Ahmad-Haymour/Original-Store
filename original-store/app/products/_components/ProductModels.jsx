@@ -1,28 +1,49 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const ProductModels = ({ productList }) => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
   const models = [
     "Nike ",
     "Nike Jordan",
     "Reebok",
     "Adidas",
     "Adidas Originals",
-    "Under Armor",
+    "Lacoste",
   ];
 
   return (
-    <div className="lg:w-[15%] bg-light-background dark:bg-dark-background border-2 p-4 relative min-w-52">
-      <div className="group relative inline-block">
-        <h2 className="text-left shadow-2xl text-2xl p-2 text-slate-200 font-extrabold hover:text-slate-300 inline-block cursor-default hover:bg-slate-700 rounded-md bg-slate-500/50"> Models</h2>
-        <ul className="group-hover:visible hover:visible absolute lg:static lg:visible invisible top-18 left-4 z-50 text-lg bg-slate-500/70">
+    <div className="lg:w-[15%] bg-light-background dark:bg-dark-background border-2 p-4 min-w-52">
+      <div className="group inline-block overflow-hidden truncate w-full">
+        {/* <h2 className="text-left shadow-2xl text-2xl p-2 text-slate-200 font-extrabold hover:text-slate-300 inline-block cursor-default rounded-md">
+          {" "}
+          Models
+        </h2> */}
+        <ul className="group-hover:visible hover:visible lg:relative lg:visible invisible top-18 left-4 z-30 text-lg">
           {models.map((model, index) => (
             <li
               key={index}
-              className="hover:bg-gray-800 cursor-pointer truncate text-slate-800 hover:text-slate-200 p-2"
+              className="cursor-pointer h-[45px] truncate text-black dark:text-lightGray hover:text-dark-text dark:hover:text-dark-text hover:drop-shadow-xl drop-blue-500 hover:scale-105 p-2 z-50 relative transition-all"
+
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
             >
               {model}
             </li>
           ))}
+          <div
+            className="absolute -left-4 w-full h-[45px] z-10 hidden lg:block shadow-xl shadow-dark-primary/50 bg-gradient-to-br from-light-primary dark:from-dark-primary from-20% via-light-secondary dark:via-dark-secondary via-50% to-light-accent dark:to-dark-accent to-70% rounded-lg p-2 transition-all duration-300"
+            style={{ top: hoveredIndex !== null ? `${ 45 * hoveredIndex}px` : '0px' }}
+          ></div>
         </ul>
       </div>
     </div>

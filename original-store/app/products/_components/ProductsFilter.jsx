@@ -3,7 +3,7 @@ import ColorPicker from "./ColorPicker";
 
 const ProductsFilter = ({ products }) => {
   return (
-    <div>
+    <div className="lg:ml-4 xl:ml-8">
       <div className="mt-8 block lg:hidden">
         <button className="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600">
           <span className="text-sm font-medium"> Filters & Sorting </span>
@@ -28,7 +28,7 @@ const ProductsFilter = ({ products }) => {
       <div className="relative py-4 px-2 flex w-full flex-wrap items-stretch">
               <input
                   type="search"
-                  className="relative m-0 block flex-auto rounded border-2 border-neutral-600 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-newPurple focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-newPurple"
+                  className="relative m-0 block flex-auto rounded border-2 border-neutral-600 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-lightGray focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-lightGray"
                   placeholder="Search"
                   aria-label="Search"
                   aria-describedby="button-addon2" />
@@ -52,8 +52,8 @@ const ProductsFilter = ({ products }) => {
           </div>
 
       <div className="rounded shadow-xl bg-light-background dark:bg-dark-background py-4 mx-2 flex gap-6">
-        <details className="relative rounded border shadow-xl border-white [&_summary::-webkit-details-marker]:hidden inline-block">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray-600 transition">
+        <details className="relative rounded shadow-xl [&_summary::-webkit-details-marker]:hidden inline-block">
+        <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-darkGray transition bg-transparent border-2 border-dark-accent rounded-md hover:text-dark-text hover:scale-105 hover:shadow-dark-primary/50 hover:border-dark-primary">
             <h4 className="text-md font-medium">Fashion</h4>
 
             <span className="transition group-open:-rotate-180">
@@ -87,8 +87,8 @@ const ProductsFilter = ({ products }) => {
             </ul>
           </div>
         </details>
-        <details className="relative rounded border shadow-xl border-white [&_summary::-webkit-details-marker]:hidden inline-block">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray-900 transition">
+        <details className="relative rounded shadow-xl [&_summary::-webkit-details-marker]:hidden inline-block">
+          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-darkGray transition bg-transparent border-2 border-dark-accent rounded-md hover:text-dark-text hover:scale-105 hover:shadow-dark-primary/50 hover:border-dark-primary">
             <h4 className="text-md font-medium">Marke</h4>
 
             <span className="transition group-open:-rotate-180">
@@ -122,8 +122,8 @@ const ProductsFilter = ({ products }) => {
             </ul>
           </div>
         </details>
-        <details className="relative rounded border shadow-xl border-white [&_summary::-webkit-details-marker]:hidden inline-block">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray-900 transition">
+        <details className="relative rounded shadow-xl [&_summary::-webkit-details-marker]:hidden inline-block">
+        <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-darkGray transition bg-transparent border-2 border-dark-accent rounded-md hover:text-dark-text hover:scale-105 hover:shadow-dark-primary/50 hover:border-dark-primary">
             <h4 className="text-md font-medium">Color</h4>
 
             <span className="transition group-open:-rotate-180">

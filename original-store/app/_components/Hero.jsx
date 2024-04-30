@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -16,7 +17,7 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4 relative">
-            <a
+            <Link
               className="block relative w-full rounded shadow-2xl px-12 py-3 text-sm font-medium text-dark-text hover:text-dark-text focus:outline-none active:text-opacity-75 sm:w-auto hover:scale-105 hover:transition hover:duration-500 bg-light-primary
               dark:bg-gradient-to-r from-light-primary dark:from-dark-primary via-light-accent dark:via-dark-accent via-60% to-light-secondary dark:to-dark-secondary to-90%
               transition-colors z-40
@@ -25,7 +26,7 @@ const Hero = () => {
               href="/products"
             >
               Get Started
-            </a>
+            </Link>
          
           </div>
         </div>

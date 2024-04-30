@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { Sun } from "lucide-react";
-import { Moon } from 'lucide-react';
+import { Moon } from "lucide-react";
 
 const DarkModeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -28,7 +28,19 @@ const DarkModeToggle = () => {
       absolute left-1 -bottom-8 z-50"
       onClick={toggleDarkMode}
     >
-      {isDarkMode ? <Moon title="Dark Mode" className="bg-dark-background rounded w-8 h-8 p-1" style={{color:"#f2f542"}}/> : <Sun title="Light Mode" style={{color:"#f2f542"}}/> }
+      { isDarkMode ? (
+        <Moon
+          title="Dark Mode"
+          className="bg-dark-background rounded w-8 h-8 p-1"
+          style={{ color: "#f2f542" }}
+        />
+      ) : (
+        <Sun
+          title="Light Mode"
+          className="bg-dark-background rounded w-8 h-8 p-1"
+          style={{ color: "#f2f542" }}
+        />
+      )}
     </button>
   );
 };

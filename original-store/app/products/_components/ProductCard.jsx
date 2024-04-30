@@ -21,7 +21,6 @@ const ProductItem = ({ product }) => {
 
         { product?.attributes?.gallery?.data &&
           <Image
-          // src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1450&q=80"
           src={product?.attributes?.gallery?.data[1]?.attributes?.url || ''}
           alt="Main card"
           width={170}

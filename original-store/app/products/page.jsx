@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import ProductList from '../_components/ProductList'
+import ProductList from './_components/ProductList'
 import ProductApis from '../_utils/ProductApis'
 import ProductModels from './_components/ProductModels'
 
