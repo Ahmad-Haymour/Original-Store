@@ -13,7 +13,7 @@ const Header = () => {
             alt="Logo"
             width={98}
             height={98}
-            className="rounded-sm cursor-pointer z-40 invert-0 dark:invert hover:invert dark:hover:invert-0"
+            className="rounded-sm cursor-pointer z-40 invert dark:invert-0 hover:invert-0 dark:hover:invert"
             title="Home"
           />
         </Link>
@@ -71,7 +71,7 @@ const Header = () => {
             <div className="sm:flex sm:gap-4 relative">
               <a
                 className="block relative rounded-md text-light-text dark:hover:text-dark-text px-5 py-2.5 m-2 text-sm hover:scale-110 font-medium transition hover:bg-transparent shadow-xl border-2 border-light-primary
-                dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray-400 dark:border-0 dark:before:bg-dark-accent
+                dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray dark:border-0 dark:before:bg-dark-accent
                 before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-md before:origin-top-left before:scale-y-0 before:bg-light-primary before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100"
                 href="#"
               >
@@ -79,7 +79,7 @@ const Header = () => {
               </a>
               <a
                 className="block relative rounded-md text-light-text hover:text-white dark:hover:text-dark-text px-5 py-2.5 m-2 text-sm hover:scale-110 font-medium transition hover:bg-transparent shadow-xl border-2 border-light-primary
-                dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray-400 dark:border-0 dark:before:bg-dark-accent
+                dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray dark:border-0 dark:before:bg-dark-accent
                 before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-md before:origin-top-left before:scale-y-0 before:bg-light-primary before:transition-transform before:duration-300 before:content-[''] before:hover:scale-y-100"
                 href="#"
               >
