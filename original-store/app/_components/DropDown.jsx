@@ -21,7 +21,7 @@ export default function Dropdown({ children, title }) {
     <div className="relative" ref={dropdownRef}>
       
       <button
-            className='flex cursor-pointer shadow-xl items-center justify-between gap-2 px-4 py-2 text-gray dark:text-darkGray transition bg-transparent border-2 border-dark-accent rounded-md hover:text-light-text dark:hover:text-dark-text hover:scale-105 hover:shadow-dark-primary/50 hover:border-dark-primary'
+            className='flex cursor-pointer shadow-xl shadow-gray/50 items-center justify-between gap-2 px-4 py-2 text-gray dark:text-darkGray transition bg-transparent border-2 border-dark-accent rounded-md hover:text-light-text dark:hover:text-dark-text hover:scale-105 hover:shadow-dark-primary/50 hover:border-dark-primary'
             type="button"
             id="dropdownMenuButton3"
             data-twe-dropdown-toggle-ref

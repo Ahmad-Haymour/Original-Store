@@ -7,8 +7,7 @@ const ProductItem = ({ product }) => {
   return (
     <Link
       href={`/product_details/${product?.id}`}
-      className="group hover:shadow-2xl bg-white overflow-hidden cursor-pointer 
-                 w-40 sm:w-52 h-56 sm:h-72 text-black rounded-lg"
+      className="group shadow-md dark:shadow hover:shadow-2xl dark:shadow-gray bg-white dark:bg-dark-dark/40 overflow-hidden cursor-pointer w-40 sm:w-52 h-56 sm:h-72 text-light-text dark:text-dark-text rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
     >
       <div className="relative h-[124px] sm:h-[170px] top-0 overflow-hidden">
         <Image
@@ -25,15 +24,15 @@ const ProductItem = ({ product }) => {
           alt="Main card"
           width={170}
           height={170}
-          className="absolute inset-0 h-[124px] sm:h-[170px] w-full object-cover opacity-0 group-hover:opacity-100 rounded-t-lg "
+          className="absolute inset-0 h-[124px] sm:h-[170px] w-full object-cover opacity-0 group-hover:opacity-100 rounded-t-lg"
         />}
 
         <Heart className="absolute top-3 right-2 text-red-500" />
       </div>
 
-      <div className="pt-3 px-2 rounded-b-lg h-[105px] sm:h-[120px] flex flex-col justify-between border-t-2 border-primary">
+      <div className="pt-3 px-2 rounded-b-lg h-[105px] sm:h-[120px] flex flex-col justify-between border-t border-light-accent">
 
-        <h2 className="text-sm text-center font-bold text-black group-hover:underline group-hover:underline-offset-8 truncate">
+        <h2 className="text-sm text-center font-bold text-light-text dark:text-dark-text group-hover:underline group-hover:underline-offset-8 truncate">
           {product?.attributes?.title}
         </h2>
 
@@ -52,7 +51,7 @@ const ProductItem = ({ product }) => {
 
         <div className="h-[40px] text-xs flex justify-between items-center text-center border-t border-gray-700 rounded-b-lg">
           <p className="sm:text-sm font-light w-[50%]">5 colors</p>
-          <hr className="w-px h-9 bg-gray-200 border-0 dark:bg-gray-700" />
+          {/* <hr className="w-px h-6 bg-gray-200 border dark:bg-gray-700" /> */}
           <p className="sm:text-sm font-light w-[50%]">
             Ab {product?.attributes?.price} €
           </p>
