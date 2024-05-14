@@ -1,12 +1,14 @@
-import { Heart, List, ShoppingBagIcon } from "lucide-react";
+import { Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const ProductItem = ({ product }) => {
+
+  console.log('Product Item: ', product);
   return (
     <Link
-      href={`/product_details/${product?.id}`}
+      href={`/products/${product?.id}`}
       className="group shadow-md dark:shadow hover:shadow-2xl dark:shadow-gray bg-white dark:bg-dark-dark/40 overflow-hidden cursor-pointer w-40 sm:w-52 h-56 sm:h-72 text-light-text dark:text-dark-text rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
     >
       <div className="relative h-[124px] sm:h-[170px] top-0 overflow-hidden">

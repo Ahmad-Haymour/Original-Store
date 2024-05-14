@@ -1,24 +1,30 @@
 "use client";
 
-import BreadCrumb from "@/app/_components/BreadCrumb";
-import ProductApis from "@/app/_utils/ProductApis";
 import React, { useEffect, useState } from "react";
-import ProductBanner from "./_components/ProductBanner";
+import ProductApis from "@/app/_utils/ProductApis";
 import ProductInfo from "./_components/ProductInfo";
+// import BreadCrumb from "@/app/_components/BreadCrumb";
+import ProductBanner from "./_components/ProductBanner";
 // import Loading from "./Loading";
 
-const productDetails = ({ params }) => {
+const ProductDetails = ( {params} ) => {
   const [productDetails, setProductDetails] = useState({});
   let [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    getProductById_();
-  }, [params?.productId]);
+  let [error, setError] = useState(true);
 
-  const getProductById_ = () => {
-    ProductApis.getProductById(params?.productId).then((res) => {
+  useEffect(() => {
+    try {
+      if (params?.product_id) getProductById_(params?.product_id)
+    } catch (error) {
+      console.log(error);
+    }
+  }, [params?.product_id]);
+
+  const getProductById_ = async() => {
+    await ProductApis.getProductById(params?.product_id).then((res) => {
       console.log("Product Item: ", res.data.data);
       setProductDetails(res?.data?.data);
-      setIsLoading(false);
+      // setIsLoading(false);
     });
   };
 
@@ -26,7 +32,7 @@ const productDetails = ({ params }) => {
     <div>
       <div className="flex justify-center flex-wrap gap-2 w-full bg-white">
         <div className="p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]">
-          <BreadCrumb />
+          {/* <BreadCrumb /> */}
 
           <div className="rounded text-black bg-white shadow-2xl my-4 p-4">
             <h5 className="text-xs">{productDetails?.attributes?.marke}</h5>
@@ -38,7 +44,7 @@ const productDetails = ({ params }) => {
             </p>
           </div>
 
-          <ProductBanner product={productDetails} isLoading={isLoading} />
+          <ProductBanner product={productDetails} />
 
           <div className="text-black rounded my-4 bg-white shadow-2xl">
             <div className="relative rounded shadow-xl">
@@ -123,4 +129,4 @@ const productDetails = ({ params }) => {
   );
 };
 
-export default productDetails;
+export default ProductDetails;
