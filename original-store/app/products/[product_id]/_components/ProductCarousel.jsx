@@ -27,13 +27,11 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
   return (
       gallery[currentImageIndex]?.attributes?.url ? (
         <div
-          className="object-fit relative p-4 flex justify-center rounded-lg
-                      sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
+          className="object-fit relative p-4 flex justify-center rounded-lg sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
         >
           <Image
             src={gallery[currentImageIndex].attributes.url}
-            className="object-cover group-hover:scale-125 hover:shadow-2xl hover:z-50
-                     transition-transform duration-500 cursor-pointer h-auto w-auto"
+            className="object-cover group-hover:scale-125 hover:shadow-2xl dark:hover:shadow-xl dark:shadow-gray z-40 transition-transform duration-500 cursor-pointer h-auto w-auto rounded"
             alt="Banner_1"
             layout="fill"
             objectFit="cover"
@@ -41,11 +39,11 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
           <div className="relative w-full">
             <ChevronLeft
               onClick={prevSlide}
-              className="hidden group-hover:block absolute top-[50%] -start-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-50 group-hover:scale-125 size-6 md:size-8"
+              className="hidden group-hover:block absolute top-[50%] -start-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-40 group-hover:scale-125 size-6 md:size-8"
             />
             <ChevronRight
               onClick={nextSlide}
-              className="hidden group-hover:block absolute top-[50%] -end-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-50 group-hover:scale-125 size-6 md:size-8"
+              className="hidden group-hover:block absolute top-[50%] -end-10 transition duration-500 -translate-x-0 translate-y-[-50%] rounded-full p-1 bg-black/20 text-black cursor-pointer z-40 group-hover:scale-125 size-6 md:size-8"
             />
           </div>
         </div>

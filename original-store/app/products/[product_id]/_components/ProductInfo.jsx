@@ -13,10 +13,10 @@ const ProductInfo = ({ product }) => {
     return (
       <li
         key={size}
-        className={`h-7 w-7 cursor-pointer text-sm border-2 rounded grid place-items-center ${
+        className={`h-7 w-7 cursor-pointer text-sm rounded grid place-items-center hover:bg-light-primary hover:text-white ${
           isSelected
-            ? "bg-newPurple text-white hover:bg-none"
-            : "border-gray-200 bg-white hover:bg-purple hover:text-white"
+            ? "border-2 border-light-primary"
+            : "bg-light-background dark:bg-dark-background "
         } cursor-pointer`}
         onClick={() => handleSizeClick(size)}
       >
@@ -27,12 +27,11 @@ const ProductInfo = ({ product }) => {
 
   return (
     <div
-      className="flex flex-col justify-between text-black text-lg bg-gray-100 
-                 flex-1 p-8 rounded min-h-60 h-full w-1/2 xl:max-w-[580px]"
+      className="flex flex-col justify-between text-light-text dark:text-dark-text text-lg bg-darkGray dark:bg-gray flex-1 p-8 rounded min-h-60 h-full w-1/2 xl:max-w-[580px]"
     >
       <div className="relative rounded shadow-xl">
-        <details className="overflow-hidden rounded border shadow-xl border-gray-300 [&_summary::-webkit-details-marker]:hidden absolute top-0 left-0 w-full">
-          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-white p-4 text-gray-900 transition">
+        <details className="overflow-hidden rounded border shadow-xl border-gray [&_summary::-webkit-details-marker]:hidden absolute top-0 left-0 w-full">
+          <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-light-background dark:bg-dark-background p-4 text-gray transition">
             <span className="text-sm font-medium"> Pick your size: </span>
 
             <span className="transition group-open:-rotate-180">
@@ -53,11 +52,11 @@ const ProductInfo = ({ product }) => {
             </span>
           </summary>
 
-          <div className="border-t border-gray-200 bg-white">
+          <div className="border-t border-gray bg-light-background dark:bg-dark-background">
             <h5 className="font-semibold underline underline-offset-4 text-center py-2">
               EU Sizes
             </h5>
-            <ul className="border-t border-gray-200 p-4 flex flex-wrap gap-2">
+            <ul className="border-t border-gray p-4 flex flex-wrap gap-2">
               {sizeElements}
             </ul>
           </div>
@@ -72,13 +71,12 @@ const ProductInfo = ({ product }) => {
           </div>
 
           <button
-            className="border-2 border-gray-400 bg-purple text-white rounded py-2 px-4 
-                       hover:shadow-lg hover:bg-gray-400 text-md"
+            className="bg-purple text-white rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
         </div>
-        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-t-2 border-purple-400 shadow-2xl">
           {sizeElements}
         </ul>
       </div>
@@ -91,13 +89,13 @@ const ProductInfo = ({ product }) => {
           </div>
 
           <button
-            className="border-2 border-gray-400 bg-darkPurple text-white rounded py-2 px-4 
+            className="bg-darkPurple text-white rounded py-2 px-4 
                        hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
         </div>
-        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-t-2 border-purple-400 shadow-2xl">
           {sizeElements}
         </ul>
       </div>
@@ -110,13 +108,13 @@ const ProductInfo = ({ product }) => {
           </div>
 
           <button
-            className="border-2 border-gray-400 bg-lightPurple text-white rounded py-2 px-4 
+            className="bg-lightPurple text-white rounded py-2 px-4 
                        hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
         </div>
-        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-t-2 border-purple-400 shadow-2xl">
           {sizeElements}
         </ul>
       </div>
@@ -128,13 +126,12 @@ const ProductInfo = ({ product }) => {
           </div>
 
           <button
-            className="border-2 border-gray-400 bg-newPurple text-white rounded py-2 px-4 
-                       hover:shadow-lg hover:bg-gray-400 text-md"
+            className="bg-newPurple text-white rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md"
           >
             Zum Shop
           </button>
         </div>
-        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-2 border-t-purple-400 shadow-2xl">
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded bg-white border-t-2 border-purple-400 shadow-2xl">
           {sizeElements}
         </ul>
       </div>

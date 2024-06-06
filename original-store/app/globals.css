@@ -31,3 +31,25 @@ body {
     text-wrap: balance;
   }
 }
+
+/* styles.css */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners */
+  border: 3px solid transparent; /* Border for better contrast */
+  background-clip: content-box; /* Ensures border doesn't overlap with thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #7a7b94; /* Color of the scrollbar thumb on hover */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 1px; /* Rounded corners */
+}

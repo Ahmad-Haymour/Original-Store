@@ -7,7 +7,7 @@ const ProductsFilter = ({ products }) => {
     <div className="lg:ml-4 xl:ml-8">
       <div className="mt-8 block lg:hidden">
         <button className="flex cursor-pointer items-center gap-2 border-b border-gray-400 pb-1 text-gray-900 transition hover:border-gray-600">
-          <span className="text-sm font-medium"> Filters & Sorting </span>
+          <span className="text-sm font-medium text-light-text dark:text-dark-text"> Filters & Sorting </span>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"

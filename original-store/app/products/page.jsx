@@ -13,7 +13,7 @@ const Products = () => {
 
     const getLatestProducts_=()=>{
         ProductApis.getLatestProducts().then(res=>{
-            console.log(res.data)
+            console.log('Product list: ', res.data)
             setProductList(res.data.data)
         })
     }

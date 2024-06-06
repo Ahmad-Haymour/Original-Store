@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-light-background/90 none dark:bg-dark-background/80 shadow-2xl border-b border-slate-400 sticky top-0 z-50">
+    <header className="bg-light-background/95 dark:bg-dark-background/80 shadow-2xl border-b border-slate-400 sticky top-0 z-50">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <Link href="/">
           <Image
@@ -13,7 +13,7 @@ const Header = () => {
             alt="Logo"
             width={98}
             height={98}
-            className="rounded-sm cursor-pointer z-40 invert dark:invert-0 hover:invert-0 dark:hover:invert"
+            className="rounded-sm cursor-pointer z-40 invert dark:invert-0 hover:invert-0 dark:hover:invert transition-all"
             title="Home"
           />
         </Link>

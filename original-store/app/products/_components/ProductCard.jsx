@@ -4,8 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 const ProductItem = ({ product }) => {
-
-  console.log('Product Item: ', product);
   return (
     <Link
       href={`/products/${product?.id}`}
@@ -53,7 +51,6 @@ const ProductItem = ({ product }) => {
 
         <div className="h-[40px] text-xs flex justify-between items-center text-center border-t border-gray-700 rounded-b-lg">
           <p className="sm:text-sm font-light w-[50%]">5 colors</p>
-          {/* <hr className="w-px h-6 bg-gray-200 border dark:bg-gray-700" /> */}
           <p className="sm:text-sm font-light w-[50%]">
             Ab {product?.attributes?.price} €
           </p>
