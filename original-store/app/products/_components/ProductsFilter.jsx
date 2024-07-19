@@ -2,7 +2,9 @@ import React from "react";
 import ColorPicker from "./ColorPicker";
 import Dropdown from "@/app/_components/DropDown";
 
-const ProductsFilter = ({ products }) => {
+const ProductsFilter = ({ products, setFilteredProducts }) => {
+
+  
   return (
     <div className="lg:ml-4 xl:ml-8">
       <div className="mt-8 block lg:hidden">

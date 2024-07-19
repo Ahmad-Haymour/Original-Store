@@ -1,16 +1,27 @@
 import Link from "next/link";
-import React from "react";
+import { useSearchParams } from "next/navigation";
+import React, { useEffect } from "react";
 
-const BreadCrumb = () => {
+const BreadCrumb = ({ filterProducts }) => {
+  const searchParams = useSearchParams();
+  const brand = searchParams.get("brand");
+  const model = searchParams.get("model");
+  const color = searchParams.get("color");
+
+  useEffect(() => {
+    if (filterProducts) {
+      filterProducts(brand, model, color);
+    }
+  }, [brand, model, color, filterProducts]);
+
   return (
-    <nav aria-label="Breadcrumb" className="px-4">
-      <ol className="flex items-center gap-1 text-sm text-gray-400">
-        <li>
-          <Link href="/" className="flex transition hover:text-gray-700">
-
+    <nav aria-label="Breadcrumb" className="px-4 py-2 mt-4">
+      <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-400">
+        <li className="flex items-center">
+          <Link href="/" className="transition hover:text-gray-700 flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-4 w-4 -mt-px"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -25,8 +36,7 @@ const BreadCrumb = () => {
             <span className="pl-2"> Home </span>
           </Link>
         </li>
-
-        <li className="rtl:rotate-180">
+        <li className="flex items-center rtl:rotate-180">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4"
@@ -40,35 +50,80 @@ const BreadCrumb = () => {
             />
           </svg>
         </li>
-
-        <li>
-          <a href="#" className="block transition hover:text-gray-700">
-            {" "}
-            Snickers{" "}
-          </a>
+        <li className="flex items-center">
+          <Link href={`/products`} className="transition hover:text-gray-700">
+            Sneaker
+          </Link>
         </li>
-
-        <li className="rtl:rotate-180">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </li>
-
-        <li>
-          <a href="#" className="block transition hover:text-gray-700">
-            {" "}
-            Plain Tee{" "}
-          </a>
-        </li>
+        {brand && (
+          <>
+            <li className="flex items-center rtl:rotate-180">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </li>
+            <li className="flex items-center">
+              <Link href={`/products?brand=${brand}`} className="transition hover:text-gray-700">
+                {brand}
+              </Link>
+            </li>
+          </>
+        )}
+        {model && (
+          <>
+            <li className="flex items-center rtl:rotate-180">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </li>
+            <li className="flex items-center">
+              <Link href={`/products?brand=${brand}&model=${model}`} className="transition hover:text-gray-700">
+                {model}
+              </Link>
+            </li>
+          </>
+        )}
+        {color && (
+          <>
+            <li className="flex items-center rtl:rotate-180">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </li>
+            <li className="flex items-center">
+              <Link href={`/products?brand=${brand}&model=${model}&color=${color}`} className="transition hover:text-gray-700">
+                {color}
+              </Link>
+            </li>
+          </>
+        )}
       </ol>
     </nav>
   );

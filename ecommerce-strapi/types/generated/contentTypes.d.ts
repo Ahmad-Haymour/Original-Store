@@ -374,15 +374,14 @@ export interface ApiProductProduct extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    brand: Attribute.String;
     description: Attribute.Blocks;
     image: Attribute.Media;
     gallery: Attribute.Media;
-    price: Attribute.Decimal;
-    category: Attribute.String;
+    price: Attribute.Decimal & Attribute.DefaultTo<12000>;
+    category: Attribute.String & Attribute.DefaultTo<'sneaker'>;
     color: Attribute.String;
-    size: Attribute.Integer;
-    marke: Attribute.String;
+    size: Attribute.Integer & Attribute.DefaultTo<44>;
     model: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

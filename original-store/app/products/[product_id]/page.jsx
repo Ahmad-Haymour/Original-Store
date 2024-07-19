@@ -3,14 +3,12 @@
 import React, { useEffect, useState } from "react";
 import ProductApis from "@/app/_utils/ProductApis";
 import ProductInfo from "./_components/ProductInfo";
-// import BreadCrumb from "@/app/_components/BreadCrumb";
+import BreadCrumb from "@/app/_components/BreadCrumb";
 import ProductBanner from "./_components/ProductBanner";
 // import Loading from "./Loading";
 
 const ProductDetails = ({ params }) => {
   const [productDetails, setProductDetails] = useState({});
-  let [isLoading, setIsLoading] = useState(true);
-  let [error, setError] = useState(true);
 
   useEffect(() => {
     try {
@@ -30,18 +28,21 @@ const ProductDetails = ({ params }) => {
 
   return (
     <div>
-      <div className="flex justify-center flex-wrap gap-2 w-full bg-light-background dark:bg-dark-background">
+      <div className="flex justify-center flex-wrap gap-2 w-full bg-white dark:bg-dark-background">
         <div className="p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]">
-          {/* <BreadCrumb /> */}
+          <BreadCrumb />
 
-          <div className="rounded text-light-text dark:text-dark-text bg-light-background dark:bg-dark-background shadow-2xl my-4 p-4">
+          <div className="rounded flex flex-row-reverse justify-between items-center text-light-text dark:text-lightGray dark:bg-gray/50 shadow-2xl my-4 p-4">
             <h5 className="text-xs">{productDetails?.attributes?.marke}</h5>
+
+            <div>
             <h2 className="text-xl font-extrabold py-1">
-              {productDetails?.attributes?.title}
+              {productDetails?.attributes?.brand}
             </h2>
-            <p className="text-xs text-gray">
+            <p className="text-xs">
               {productDetails?.attributes?.model}
             </p>
+            </div>
           </div>
 
           <ProductBanner product={productDetails} />
@@ -57,7 +58,7 @@ const ProductDetails = ({ params }) => {
           <div className="text-light-text dark:text-dark-text rounded mt-16 mb-4 bg-light-background dark:bg-dark-dark shadow-2xl dark:shadow-gray">
             <div className="relative rounded shadow-xl dark:border-lightGray">
               <details className="overflow-hidden rounded shadow-xl [&_summary::-webkit-details-marker]:hidden w-full">
-                <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:from-dark-background dark:to-dark-dark p-4 transition">
+                <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:bg-none dark:bg-gray/50 p-4 transition">
                   <span className="text-lg font-semibold dark:text-dark-text text-light-text">
                     Details:{" "}
                   </span>
@@ -81,7 +82,7 @@ const ProductDetails = ({ params }) => {
                 </summary>
 
                 <div className="bg-gradiant-to-b from-white to-lightGray dark:bg-dark-background py-2 px-4">
-                  <h5 className="font-extralight text-gray dark:text-dark-text text-sm text-left py-2 px-6">
+                  <h5 className="font-extralight text-gray/50 dark:text-dark-text text-sm text-left py-2 px-6">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Sequi, a non! Dolorum exercitationem blanditiis fugiat
                     placeat libero numquam earum facere a corrupti architecto
@@ -90,9 +91,9 @@ const ProductDetails = ({ params }) => {
                 </div>
               </details>
             </div>
-            <div className="relative rounded shadow-xl border-t dark:border-lightGray">
+            <div className="relative rounded shadow-xl border-t dark:border-black">
               <details className="overflow-hidden rounded shadow-xl [&_summary::-webkit-details-marker]:hidden w-full border-none">
-                <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:from-dark-background dark:to-dark-dark p-4 transition">
+                <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:bg-none dark:bg-gray p-4 transition">
                   <span className="text-lg font-semibold dark:text-dark-text text-light-text">
                     Material & Care:{" "}
                   </span>

@@ -6,7 +6,7 @@ import React from "react";
 const ProductItem = ({ product }) => {
   return (
     <Link
-      href={`/products/${product?.id}`}
+      href={`/products/${product?.id}?brand=${product.attributes.brand}&model=${product.attributes.model}&color=${product.attributes.color}`}
       className="group shadow-md dark:shadow hover:shadow-2xl dark:shadow-gray bg-white dark:bg-dark-dark/40 overflow-hidden cursor-pointer w-40 sm:w-52 h-56 sm:h-72 text-light-text dark:text-dark-text rounded-lg hover:scale-105 transition-all duration-300 ease-in-out"
     >
       <div className="relative h-[124px] sm:h-[170px] top-0 overflow-hidden">
@@ -33,10 +33,14 @@ const ProductItem = ({ product }) => {
       <div className="pt-3 px-2 rounded-b-lg h-[105px] sm:h-[120px] flex flex-col justify-between border-t border-light-accent">
 
         <h2 className="text-sm text-center font-bold text-light-text dark:text-dark-text group-hover:underline group-hover:underline-offset-8 truncate">
-          {product?.attributes?.title}
+          {product?.attributes?.brand}
         </h2>
 
         <div className="overflow-hidden text-center">
+          {product?.attributes?.model}
+        </div>
+
+        {/* <div className="overflow-hidden text-center">
           {product?.attributes?.description?.map((element) =>
             element.children?.map((item) => (
               <span
@@ -47,10 +51,10 @@ const ProductItem = ({ product }) => {
               </span>
             ))
           )}
-        </div>
+        </div> */}
 
         <div className="h-[40px] text-xs flex justify-between items-center text-center border-t border-gray-700 rounded-b-lg">
-          <p className="sm:text-sm font-light w-[50%]">5 colors</p>
+          <p className="sm:text-sm font-light w-[50%]">{product?.attributes?.color}</p>
           <p className="sm:text-sm font-light w-[50%]">
             Ab {product?.attributes?.price} €
           </p>
