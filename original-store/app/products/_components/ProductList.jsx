@@ -42,7 +42,7 @@ const ProductList = () => {
   return (
     <div className="bg-light-background dark:bg-dark-background w-full">
       <BreadCrumb filterProducts={filterProducts} />
-      <ProductsFilter products={productList} setFilteredProducts={setFilteredProducts} />
+      <ProductsFilter products={productList} filteredProducts={filteredProducts} setFilteredProducts={setFilteredProducts} />
       <div className="w-full flex justify-center items-center bg-light-background dark:bg-dark-background flex-wrap px-2 py-10 md:gap-6 gap-4">
         {filteredProducts && filteredProducts.map((item) => (
           <ProductCard
