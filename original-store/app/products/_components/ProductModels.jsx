@@ -1,6 +1,8 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
-const ProductModels = ({ productList }) => {
+const ProductModels = ( ) => {
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -12,21 +14,16 @@ const ProductModels = ({ productList }) => {
   };
   
   const models = [
-    "Nike ",
-    "Nike Jordan",
+    "Nike",
     "Reebok",
     "Adidas",
-    "Adidas Originals",
     "Lacoste",
+    "Puma"
   ];
 
   return (
     <div className="lg:w-[15%] hidden lg:block bg-light-background dark:bg-dark-background border-2 p-4 min-w-52 ">
       <div className="group inline-block overflow-hidden truncate w-full">
-        {/* <h2 className="text-left shadow-2xl text-2xl p-2 text-slate-200 font-extrabold hover:text-slate-300 inline-block cursor-default rounded-md">
-          {" "}
-          Models
-        </h2> */}
         <ul className="group-hover:visible hover:visible lg:relative lg:visible invisible top-18 left-4 z-30 text-lg">
           {models.map((model, index) => (
             <li
@@ -36,7 +33,9 @@ const ProductModels = ({ productList }) => {
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >
-              {model}
+              <Link href={`/products?brand=${model.toLowerCase()}`}>
+                {model}
+              </Link>
             </li>
           ))}
           <div

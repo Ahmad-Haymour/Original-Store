@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 import ProductCard from "./ProductCard";
 import ProductsFilter from "./ProductsFilter";
 import BreadCrumb from "@/app/_components/BreadCrumb";
-import { useSearchParams } from "next/navigation";
 import ProductApis from '../../_utils/ProductApis';
 
 const ProductList = () => {

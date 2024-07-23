@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ColorPicker from "./ColorPicker";
 import Dropdown from "@/app/_components/DropDown";
 
@@ -30,7 +30,6 @@ const ProductsFilter = ({ products, setFilteredProducts }) => {
           aria-describedby="button-addon2"
           value={searchTerm}
           onChange={handleSearchChange}
-          
         />
 
         {/* <!--Search icon--> */}
