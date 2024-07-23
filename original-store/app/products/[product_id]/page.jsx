@@ -5,7 +5,6 @@ import ProductApis from "@/app/_utils/ProductApis";
 import ProductInfo from "./_components/ProductInfo";
 import BreadCrumb from "@/app/_components/BreadCrumb";
 import ProductBanner from "./_components/ProductBanner";
-// import Loading from "./Loading";
 
 const ProductDetails = ({ params }) => {
   const [productDetails, setProductDetails] = useState({});
@@ -22,7 +21,6 @@ const ProductDetails = ({ params }) => {
     await ProductApis.getProductById(params?.product_id).then((res) => {
       console.log("Product Item: ", res.data.data);
       setProductDetails(res?.data?.data);
-      // setIsLoading(false);
     });
   };
 
@@ -32,33 +30,24 @@ const ProductDetails = ({ params }) => {
         <div className="p-4 h-full lg:w-1/2 w-full lg:max-w-[580px]">
           <BreadCrumb />
 
-          <div className="rounded flex flex-row-reverse justify-between items-center text-light-text dark:text-lightGray dark:bg-gray/50 shadow-2xl my-4 p-4">
-            <h5 className="text-xs">{productDetails?.attributes?.marke}</h5>
-
-            <div>
-            <h2 className="text-xl font-extrabold py-1">
-              {productDetails?.attributes?.brand}
-            </h2>
-            <p className="text-xs">
-              {productDetails?.attributes?.model}
-            </p>
-            </div>
+          <div className="rounded text-light-text dark:text-lightGray dark:bg-gray/50 shadow-2xl my-4 p-4">
+              <p className="text-md font-bold">
+                {productDetails?.attributes?.brand}
+              </p>
+              <h3 className="text-3xl font-extrabold py-3 capitalize">
+                {productDetails?.attributes?.model}
+              </h3>
+              <p className="text-sm font-light text-gray dark:text-lightGray">
+                {productDetails?.attributes?.color}
+              </p>
           </div>
 
           <ProductBanner product={productDetails} />
 
-          {/* 
-            <div>
-                    Ähnliche produkte
-                    Mehr von Nike..
-                    Weitere Produkte von <span className='underline'>Marke</span>
-            </div> 
-          */}
-
-          <div className="text-light-text dark:text-dark-text rounded mt-16 mb-4 bg-light-background dark:bg-dark-dark shadow-2xl dark:shadow-gray">
-            <div className="relative rounded shadow-xl dark:border-lightGray">
-              <details className="overflow-hidden rounded shadow-xl [&_summary::-webkit-details-marker]:hidden w-full">
-                <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:bg-none dark:bg-gray/50 p-4 transition">
+          <div className="text-light-text dark:text-dark-text rounded mt-16 mb-4 bg-light-background dark:bg-dark-dark shadow-lg dark:shadow-gray">
+            <div className="relative rounded shadow-lg dark:border-lightGray">
+              <details className="overflow-hidden rounded shadow-lg [&_summary::-webkit-details-marker]:hidden w-full">
+                <summary className="flex cursor-pointer shadow-lg items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:bg-none dark:bg-gray/50 p-4 transition">
                   <span className="text-lg font-semibold dark:text-dark-text text-light-text">
                     Details:{" "}
                   </span>
@@ -91,9 +80,9 @@ const ProductDetails = ({ params }) => {
                 </div>
               </details>
             </div>
-            <div className="relative rounded shadow-xl border-t dark:border-black">
-              <details className="overflow-hidden rounded shadow-xl [&_summary::-webkit-details-marker]:hidden w-full border-none">
-                <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:bg-none dark:bg-gray p-4 transition">
+            <div className="relative rounded shadow-lg border-t dark:border-black">
+              <details className="overflow-hidden rounded shadow-lg [&_summary::-webkit-details-marker]:hidden w-full border-none">
+              <summary className="flex cursor-pointer shadow-lg items-center justify-between gap-2 bg-gradient-to-t from-white to-lightGray dark:bg-none dark:bg-gray/50 p-4 transition">
                   <span className="text-lg font-semibold dark:text-dark-text text-light-text">
                     Material & Care:{" "}
                   </span>
@@ -128,7 +117,6 @@ const ProductDetails = ({ params }) => {
             </div>
           </div>
         </div>
-
         <ProductInfo product={productDetails} />
       </div>
     </div>

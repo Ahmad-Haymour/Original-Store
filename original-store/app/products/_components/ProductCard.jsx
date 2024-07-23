@@ -26,37 +26,23 @@ const ProductItem = ({ product }) => {
           height={170}
           className="absolute inset-0 h-[124px] sm:h-[170px] w-full object-cover opacity-0 group-hover:opacity-100 rounded-t-lg"
         />}
-
         <Heart className="absolute top-3 right-2 text-red-500" />
       </div>
 
       <div className="pt-3 px-2 rounded-b-lg h-[105px] sm:h-[120px] flex flex-col justify-between border-t border-light-accent">
 
-        <h2 className="text-sm text-center font-bold text-light-text dark:text-dark-text group-hover:underline group-hover:underline-offset-8 truncate">
+        <h2 className="capitalize text-sm text-center font-bold text-light-text dark:text-dark-text group-hover:underline group-hover:underline-offset-8 truncate">
           {product?.attributes?.brand}
         </h2>
 
-        <div className="overflow-hidden text-center">
+        <div className="overflow-hidden text-center capitalize">
           {product?.attributes?.model}
         </div>
-
-        {/* <div className="overflow-hidden text-center">
-          {product?.attributes?.description?.map((element) =>
-            element.children?.map((item) => (
-              <span
-                className="text-sm text-gray-700 font-light truncate"
-                key={item?.text}
-              >
-                {item?.text}
-              </span>
-            ))
-          )}
-        </div> */}
 
         <div className="h-[40px] text-xs flex justify-between items-center text-center border-t border-gray-700 rounded-b-lg">
           <p className="sm:text-sm font-light w-[50%]">{product?.attributes?.color}</p>
           <p className="sm:text-sm font-light w-[50%]">
-            Ab {product?.attributes?.price} €
+            Ab { Math.floor(Math.random() * (200 - 80 + 1) ) + 80 } €
           </p>
         </div>
       </div>

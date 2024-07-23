@@ -16,7 +16,7 @@ const BreadCrumb = ({ filterProducts }) => {
 
   return (
     <nav aria-label="Breadcrumb" className="px-4 py-2 mt-4">
-      <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-400">
+      <ol className="flex flex-wrap items-center gap-1 text-sm text-light-text dark:text-dark-text">
         <li className="flex items-center">
           <Link href="/" className="transition hover:text-gray-700 flex items-center">
             <svg

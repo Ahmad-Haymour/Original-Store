@@ -4,7 +4,9 @@ const ProductInfo = ({ product }) => {
   const [selectedSizes, setSelectedSizes] = useState([]);
 
   const handleSizeClick = (size) => {
-    setSelectedSizes((prev) => prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size] );
+    setSelectedSizes((prev) =>
+      prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size]
+    );
   };
 
   const sizeElements = [...Array(15)].map((_, index) => {
@@ -26,9 +28,7 @@ const ProductInfo = ({ product }) => {
   });
 
   return (
-    <div
-      className="flex flex-col justify-between text-light-text dark:text-dark-text text-lg bg-lightGray/50 dark:bg-gray/50 flex-1 p-8 rounded min-h-60 h-full w-1/2 xl:max-w-[580px]"
-    >
+    <div className="flex flex-col justify-between text-light-text dark:text-dark-text text-lg bg-lightGray/50 dark:bg-gray/50 flex-1 p-8 rounded min-h-60 h-full w-1/2 xl:max-w-[580px]">
       <div className="relative rounded shadow-xl">
         <details className="overflow-hidden rounded border shadow-lg dark:shadow-gray border-gray [&_summary::-webkit-details-marker]:hidden absolute top-0 left-0 w-full">
           <summary className="flex cursor-pointer shadow-xl items-center justify-between gap-2 bg-light-background dark:bg-dark-background p-4 text-gray dark:text-lightGray transition">
@@ -63,16 +63,14 @@ const ProductInfo = ({ product }) => {
         </details>
       </div>
 
-      <div className="mb-4 mt-24 shadow-lg shadow-gray">
+      <div className="mt-20 mb-4 shadow-2xl">
         <div className="rounded text-md bg-light-background w-full h-fit flex justify-between px-4 py-3 shadow-2xl dark:bg-dark-background">
           <div className="flex justify-center items-center gap-6 text-md">
-            <span>Logo </span>
-            <span>{product?.attributes?.price} €</span>
+            <span>Snipe</span>
+            <span>{Math.floor(Math.random() * (200 - 80 + 1)) + 80} €</span>
           </div>
 
-          <button
-            className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md"
-          >
+          <button className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md dark:shadow-gray">
             Zum Shop
           </button>
         </div>
@@ -81,16 +79,14 @@ const ProductInfo = ({ product }) => {
         </ul>
       </div>
 
-      <div className="my-4">
+      <div className="my-4 shadow-2xl">
         <div className="rounded text-md bg-light-background w-full h-fit flex justify-between px-4 py-3 shadow-2xl dark:bg-dark-background">
           <div className="flex justify-center items-center gap-6 text-md">
-            <span>Nike </span>
-            <span>{product?.attributes?.price} €</span>
+            <span>Deichmann</span>
+            <span>{Math.floor(Math.random() * (200 - 80 + 1)) + 80} €</span>
           </div>
 
-          <button
-            className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md"
-          >
+          <button className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md dark:shadow-gray">
             Zum Shop
           </button>
         </div>
@@ -99,16 +95,14 @@ const ProductInfo = ({ product }) => {
         </ul>
       </div>
 
-      <div className="my-4">
+      <div className="my-4 shadow-2xl">
         <div className="rounded text-md bg-light-background w-full h-fit flex justify-between px-4 py-3 shadow-2xl dark:bg-dark-background">
           <div className="flex justify-center items-center gap-6 text-md">
-            <span>Snipe </span>
-            <span>{product?.attributes?.price} €</span>
+            <span>Zalando</span>
+            <span>{Math.floor(Math.random() * (200 - 80 + 1)) + 80} €</span>
           </div>
 
-          <button
-            className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md"
-          >
+          <button className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md dark:shadow-gray">
             Zum Shop
           </button>
         </div>
@@ -117,16 +111,14 @@ const ProductInfo = ({ product }) => {
         </ul>
       </div>
 
-      <div className="my-4">
+      <div className="my-4 shadow-2xl">
         <div className="rounded text-md bg-light-background w-full h-fit flex justify-between px-4 py-3 shadow-2xl dark:bg-dark-background">
           <div className="flex justify-center items-center gap-6 text-md">
-            <span>Lacoste </span>
-            <span>{product?.attributes?.price} €</span>
+            <span>Amazon</span>
+            <span>{Math.floor(Math.random() * (200 - 80 + 1)) + 80} €</span>
           </div>
 
-          <button
-            className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md"
-          >
+          <button className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md dark:shadow-gray">
             Zum Shop
           </button>
         </div>
@@ -135,6 +127,21 @@ const ProductInfo = ({ product }) => {
         </ul>
       </div>
 
+      <div className="my-4 shadow-2xl">
+        <div className="rounded text-md bg-light-background w-full h-fit flex justify-between px-4 py-3 shadow-2xl dark:bg-dark-background">
+          <div className="flex justify-center items-center gap-6 text-md">
+            <span>Asos</span>
+            <span>{Math.floor(Math.random() * (200 - 80 + 1)) + 80} €</span>
+          </div>
+
+          <button className="rounded py-2 px-4 hover:shadow-lg hover:bg-gray-400 text-md dark:shadow-gray">
+            Zum Shop
+          </button>
+        </div>
+        <ul className="flex flex-wrap gap-1 py-6 px-4 rounded border-t-2 border-light-primary dark:border-gray shadow-2xl  bg-light-background dark:bg-dark-background">
+          {sizeElements}
+        </ul>
+      </div>
     </div>
   );
 };
