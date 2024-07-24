@@ -25,7 +25,7 @@ const DarkModeToggle = () => {
   return (
     <button
       className="rounded-full w-12 h-6 p-1 flex items-center justify-center
-      absolute left-1 bottom-6 z-50"
+      absolute left-1 bottom-5 z-50"
       onClick={toggleDarkMode}
     >
       { isDarkMode ? (

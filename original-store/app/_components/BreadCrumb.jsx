@@ -18,7 +18,7 @@ const BreadCrumb = ({ filterProducts }) => {
     <nav aria-label="Breadcrumb" className="px-4 py-2 mt-4">
       <ol className="flex flex-wrap items-center gap-1 text-sm text-light-text dark:text-dark-text">
         <li className="flex items-center">
-          <Link href="/" className="transition hover:text-gray-700 flex items-center">
+          <Link href="/" className="transition hover:text-gray flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 -mt-px"
@@ -51,7 +51,7 @@ const BreadCrumb = ({ filterProducts }) => {
           </svg>
         </li>
         <li className="flex items-center">
-          <Link href={`/products`} className="transition hover:text-gray-700">
+          <Link href={`/products`} className="transition hover:text-gray">
             Sneaker
           </Link>
         </li>
@@ -72,7 +72,7 @@ const BreadCrumb = ({ filterProducts }) => {
               </svg>
             </li>
             <li className="flex items-center">
-              <Link href={`/products?brand=${brand}`} className="transition hover:text-gray-700">
+              <Link href={`/products?brand=${brand}`} className="transition hover:text-gray capitalize">
                 {brand}
               </Link>
             </li>

@@ -13,7 +13,7 @@ const Header = () => {
             alt="Logo"
             width={98}
             height={98}
-            className="rounded-sm cursor-pointer z-40 invert dark:invert-0 hover:invert-0 dark:hover:invert transition-all"
+            className="rounded-sm cursor-pointer z-40 invert dark:invert-0 hover:invert-0 dark:hover:invert transition-all ml-4"
             title="Home"
           />
         </Link>
@@ -53,22 +53,13 @@ const Header = () => {
                   after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
                 href="#"
               >
-                About Us
-              </a>
-
-              <a
-                className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
-                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
-                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
-                href="#"
-              >
                 Contact Us
               </a>
             </ul>
           </nav>
           <DarkModeToggle />
           <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4 relative">
+            <div className="hidden md:flex relative">
               <a
                 className="block relative rounded-md text-light-text dark:hover:text-dark-text px-5 py-2.5 m-2 text-sm hover:scale-110 font-medium transition hover:bg-transparent shadow-xl border-2 border-light-primary
                 dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray dark:border-0 dark:before:bg-dark-accent
