@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState, useCallback } from "react";
 import ProductCard from "./ProductCard";
 import ProductsFilter from "./ProductsFilter";
