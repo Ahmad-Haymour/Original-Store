@@ -31,8 +31,7 @@ const DarkModeToggle = () => {
       { isDarkMode ? (
         <Moon
           title="Dark Mode"
-          className="bg-dark-background rounded w-8 h-8 p-1"
-          style={{ color: "#f2f542" }}
+          className="bg-dark-background rounded w-8 h-8 p-1 text-lightGray"
         />
       ) : (
         <Sun
