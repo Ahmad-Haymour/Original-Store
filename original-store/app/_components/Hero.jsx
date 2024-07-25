@@ -1,14 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text">
-      <div className="mx-auto max-w-screen-xl px-4 py-20 lg:flex">
+    <section className="bg-light-background dark:bg-dark-background text-light-text dark:text-dark-text px-20 pb-20">
+      <div className="mx-auto max-w-screen-xl px-4 pt-20 pb-10 lg:flex">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="bg-gradient-to-r from-light-primary from-50% via-light-accent via-50% to-light-secondary to-90% inline-block bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl drop-shadow-xl">
             All Of Your Products
-            <span className="sm:block text-4xl"> Are Just One Click Away. </span>
+            <span className="sm:block text-4xl">
+              {" "}
+              Are Just One Click Away.{" "}
+            </span>
           </h1>
 
           <p className="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
@@ -27,9 +31,41 @@ const Hero = () => {
             >
               Get Started
             </Link>
-         
           </div>
         </div>
+      </div>
+
+      <div className="w-full h-full">
+        <Link href={"/products"}>
+          <Image
+            src="/Sneaker-Trends.png"
+            alt="Background Image"
+            width={400}
+            height={200}
+            objectFit="cover"
+            className="h-full w-full rounded-xl mt-10 mb-20 shadow-xl shadow-gray"
+          />
+        </Link>
+        <Link href={"/products?brand=nike"}>
+          <Image
+            src="/nike-air-max.png"
+            alt="Background Image"
+            width={400}
+            height={200}
+            objectFit="cover"
+            className="h-full w-full rounded-xl my-20 shadow-xl shadow-gray"
+          />
+        </Link>
+        <Link href={"/products?color=white"}>
+          <Image
+            src="/weisse-sneaker.png"
+            alt="Background Image"
+            width={400}
+            height={200}
+            objectFit="cover"
+            className="h-full w-full rounded-xl my-20 shadow-xl shadow-gray"
+          />
+        </Link>
       </div>
     </section>
   );
