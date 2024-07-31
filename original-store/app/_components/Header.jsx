@@ -20,62 +20,51 @@ const Header = () => {
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav aria-label="Global" className="hidden md:block">
             <ul className="flex items-center gap-6 text-sm">
-              <a
+            <Link
                 className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
                   after:content-[''] after:absolute after:duration-300  after:rounded-xl
                   after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
-                href="#"
+                href="/"
+              >
+                Home
+              </Link>
+              <Link
+                className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
+                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
+                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
+                href="/about"
               >
                 About
-              </a>
+              </Link>
 
-              <a
+              <Link
                 className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
                   after:content-[''] after:absolute after:duration-300  after:rounded-xl
                   after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
-                href="#"
+                href="/products"
               >
                 Explore
-              </a>
+              </Link>
 
-              <a
-                className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
-                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
-                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
-                href="#"
-              >
-                Projects
-              </a>
-
-              <a
-                className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
-                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
-                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
-                href="#"
-              >
-                Contact Us
-              </a>
             </ul>
           </nav>
           <DarkModeToggle />
           <div className="flex items-center gap-4">
             <div className="hidden md:flex relative">
-              <a
+              <span
                 className="block relative rounded-md text-light-text dark:hover:text-dark-text px-5 py-2.5 m-2 text-sm hover:scale-110 font-medium transition hover:bg-transparent shadow-xl border-2 border-light-primary
                 dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray dark:border-0 dark:before:bg-dark-accent
-                before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-md before:origin-top-left before:scale-y-0 before:bg-light-primary before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100"
-                href="#"
+                before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-md before:origin-top-left before:scale-y-0 before:bg-light-primary before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-y-100 cursor-not-allowed"
               >
                 Login
-              </a>
-              <a
+              </span>
+              <span
                 className="block relative rounded-md text-light-text hover:text-white dark:hover:text-dark-text px-5 py-2.5 m-2 text-sm hover:scale-110 font-medium transition hover:bg-transparent shadow-xl border-2 border-light-primary
                 dark:bg-gradient-to-r from-slate-100 via-slate-200 to-gray dark:border-0 dark:before:bg-dark-accent
-                before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-md before:origin-top-left before:scale-y-0 before:bg-light-primary before:transition-transform before:duration-300 before:content-[''] before:hover:scale-y-100"
-                href="#"
+                before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:rounded-md before:origin-top-left before:scale-y-0 before:bg-light-primary before:transition-transform before:duration-300 before:content-[''] before:hover:scale-y-100 cursor-not-allowed"
               >
                 Register
-              </a>
+              </span>
             </div>
             <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden dark:bg-gray-800 dark:text-white dark:hover:text-white/75">
               <span className="sr-only">Toggle menu</span>
