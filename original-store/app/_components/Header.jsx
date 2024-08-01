@@ -1,9 +1,30 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import Link from "next/link";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.menu-container')) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="bg-light-background/95 dark:bg-dark-background/80 shadow-2xl border-b border-slate-400 sticky top-0 z-50">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
@@ -20,9 +41,9 @@ const Header = () => {
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav aria-label="Global" className="hidden md:block">
             <ul className="flex items-center gap-6 text-sm">
-            <Link
+              <Link
                 className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
-                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
+                  after:content-[''] after:absolute after:duration-300 after:rounded-xl
                   after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
                 href="/"
               >
@@ -30,7 +51,7 @@ const Header = () => {
               </Link>
               <Link
                 className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
-                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
+                  after:content-[''] after:absolute after:duration-300 after:rounded-xl
                   after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
                 href="/about"
               >
@@ -39,13 +60,12 @@ const Header = () => {
 
               <Link
                 className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
-                  after:content-[''] after:absolute after:duration-300  after:rounded-xl
+                  after:content-[''] after:absolute after:duration-300 after:rounded-xl
                   after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
                 href="/products"
               >
                 Explore
               </Link>
-
             </ul>
           </nav>
           <DarkModeToggle />
@@ -66,23 +86,75 @@ const Header = () => {
                 Register
               </span>
             </div>
-            <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden dark:bg-gray-800 dark:text-white dark:hover:text-white/75">
-              <span className="sr-only">Toggle menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
+
+            <div className="menu-container">
+              <button 
+                className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
+                onClick={handleToggleMenu}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
+                <span className="sr-only">Toggle menu</span>
+                {!isOpen ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-light-text dark:text-dark-text"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-red-700"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+            {isOpen && (
+              <ul className="absolute top-12 right-12 md:hidden bg-lightGray dark:bg-dark-dark text-lightGray h-32 w-20 rounded-md flex flex-col justify-center items-center gap-4 shadow-lg">
+                <Link
+                  className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
+                  after:content-[''] after:absolute after:duration-300 after:rounded-xl
+                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
+                  href="/"
+                >
+                  Home
+                </Link>
+                <Link
+                  className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
+                  after:content-[''] after:absolute after:duration-300 after:rounded-xl
+                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
+                  href="/about"
+                >
+                  About
+                </Link>
+
+                <Link
+                  className="relative text-light-text hover:text-light-text/75 dark:text-dark-text dark:hover:text-dark-text/75 
+                  after:content-[''] after:absolute after:duration-300 after:rounded-xl
+                  after:-bottom-2 after:left-0 after:bg-light-primary after:h-[3px] after:w-0 hover:after:w-full"
+                  href="/products"
+                >
+                  Explore
+                </Link>
+              </ul>
+            )}
           </div>
         </div>
       </div>
