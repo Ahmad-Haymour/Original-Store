@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ColorPicker from "./ColorPicker";
 import Dropdown from "@/app/_components/DropDown";
 
 const ProductsFilter = ({ products, setFilteredProducts }) => {
@@ -32,7 +31,7 @@ const ProductsFilter = ({ products, setFilteredProducts }) => {
           onChange={handleSearchChange}
         />
 
-        {/* <!--Search icon--> */}
+        {/* Search icon */}
         <span
           className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200 cursor-pointer hover:scale-125"
           id="basic-addon2"
@@ -51,6 +50,67 @@ const ProductsFilter = ({ products, setFilteredProducts }) => {
             />
           </svg>
         </span>
+      </div>
+
+      {/* Dropdown menu */}
+      <div className="rounded shadow-xl bg-light-background dark:bg-dark-background py-4 mx-2 flex gap-6">
+        <div className="relative" data-twe-dropdown-ref>
+          <Dropdown title={"Fashion"}>
+            <ul
+              className="absolute z-[1000] border-2 border-dark-secondary float-left m-0 min-w-36 list-none overflow-hidden rounded-lg border-none bg-violet-100 bg-clip-padding text-base shadow-xl shadow-light-secondary dark:shadow-dark-secondary/50 data-[twe-dropdown-show]:block dark:bg-dark-dark divide-y divide-darkGray/50 transition-all"
+              aria-labelledby="dropdownMenuButton3"
+              data-twe-dropdown-menu-ref
+            >
+              <li
+                className="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-gray hover:text-white hover:bg-darkGray active:bg-darkGray dark:text-darkGray dark:hover:text-dark-text hover:scale-105 cursor-pointer dark:hover:bg-dark-secondary/50 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 transition-all"
+                data-twe-dropdown-item-ref
+              >
+                Men
+              </li>
+              <li
+                className="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-gray hover:text-white hover:bg-darkGray active:bg-darkGray dark:text-darkGray dark:hover:text-dark-text hover:scale-105 cursor-pointer dark:hover:bg-dark-secondary/50 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 transition-all"
+                data-twe-dropdown-item-ref
+              >
+                Women
+              </li>
+              <li
+                className="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-gray hover:text-white hover:bg-darkGray active:bg-darkGray dark:text-darkGray dark:hover:text-dark-text hover:scale-110 cursor-pointer dark:hover:bg-dark-secondary/50 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 transition-all"
+                data-twe-dropdown-item-ref
+              >
+                Kids
+              </li>
+            </ul>
+          </Dropdown>
+        </div>
+
+        <div className="relative" data-twe-dropdown-ref>
+          <Dropdown title={"Marke"}>
+            <ul
+              className="absolute z-[1000] border-2 border-dark-secondary float-left m-0 min-w-36 list-none overflow-hidden rounded-lg border-none bg-violet-100 bg-clip-padding text-base shadow-xl shadow-light-secondary dark:shadow-dark-secondary/50 data-[twe-dropdown-show]:block dark:bg-dark-dark divide-y divide-darkGray/50 transition-all"
+              aria-labelledby="dropdownMenuButton3"
+              data-twe-dropdown-menu-ref
+            >
+              <li
+                className="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-gray hover:text-white hover:bg-darkGray active:bg-darkGray dark:text-darkGray dark:hover:text-dark-text hover:scale-105 cursor-pointer dark:hover:bg-dark-secondary/50 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 transition-all"
+                data-twe-dropdown-item-ref
+              >
+                Action
+              </li>
+              <li
+                className="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-gray hover:text-white hover:bg-darkGray active:bg-darkGray dark:text-darkGray dark:hover:text-dark-text hover:scale-105 cursor-pointer dark:hover:bg-dark-secondary/50 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 transition-all"
+                data-twe-dropdown-item-ref
+              >
+                Another action
+              </li>
+              <li
+                className="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-gray hover:text-white hover:bg-darkGray active:bg-darkGray dark:text-darkGray dark:hover:text-dark-text hover:scale-105 cursor-pointer dark:hover:bg-dark-secondary/50 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25 transition-all"
+                data-twe-dropdown-item-ref
+              >
+                Something else here
+              </li>
+            </ul>
+          </Dropdown>
+        </div>
       </div>
     </div>
   );

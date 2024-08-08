@@ -16,7 +16,7 @@ const ProductList = () => {
 
   const getLatestProducts_ = async () => {
     try {
-      const res = await ProductApis.getLatestProducts(1, 100);
+      const res = await ProductApis.getLatestProducts();
       const products = res.data.data;
       console.log('Products list: ', products);
       setProductList(products);
