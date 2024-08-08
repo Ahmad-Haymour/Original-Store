@@ -95,7 +95,7 @@ const BreadCrumb = ({ filterProducts }) => {
               </svg>
             </li>
             <li className="flex items-center">
-              <Link href={`/products?brand=${brand}&model=${model}`} className="transition hover:text-gray-700">
+              <Link href={`/products?brand=${brand}&model=${model}`} className="transition hover:text-gray-700 capitalize">
                 {model}
               </Link>
             </li>
@@ -118,7 +118,7 @@ const BreadCrumb = ({ filterProducts }) => {
               </svg>
             </li>
             <li className="flex items-center">
-              <Link href={`/products?brand=${brand}&model=${model}&color=${color}`} className="transition hover:text-gray-700">
+              <Link href={`/products?brand=${brand}&model=${model}&color=${color}`} className="transition hover:text-gray-700 capitalize">
                 {color}
               </Link>
             </li>
