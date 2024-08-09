@@ -5,9 +5,9 @@ const apiUrl='https://original-store.onrender.com/api'
 
 const axiosClient =axios.create({
     baseURL: apiUrl,
-    headers: {
-        Authorization: `Bearer ${apiKey}`
-    }
+    // headers: {
+    //     Authorization: `Bearer ${apiKey}`
+    // }
 })
 
 export default axiosClient;
