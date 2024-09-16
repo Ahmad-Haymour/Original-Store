@@ -4,7 +4,8 @@ import React, { useEffect, useState, useCallback } from "react";
 import ProductCard from "./ProductCard";
 import ProductsFilter from "./ProductsFilter";
 import BreadCrumb from "@/app/_components/BreadCrumb";
-import ProductApis from '../../_utils/ProductApis';
+// import ProductApis from '../../_utils/ProductApis';
+import data from '../../_utils/api'
 
 const ProductList = () => {
   const [productList, setProductList] = useState([]);
@@ -16,9 +17,9 @@ const ProductList = () => {
 
   const getLatestProducts_ = async () => {
     try {
-      const res = await ProductApis.getLatestProducts();
-      const products = res.data.data;
-      console.log('Products list: ', products);
+      // const res = await ProductApis.getLatestProducts();
+      // const products = res.data.data;
+      const products = data;
       setProductList(products);
       setFilteredProducts(products);
     } catch (error) {

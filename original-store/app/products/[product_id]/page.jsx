@@ -1,27 +1,36 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ProductApis from "@/app/_utils/ProductApis";
+// import ProductApis from "@/app/_utils/ProductApis";
 import ProductInfo from "./_components/ProductInfo";
 import BreadCrumb from "@/app/_components/BreadCrumb";
 import ProductBanner from "./_components/ProductBanner";
+import data from "@/app/_utils/api"
 
 const ProductDetails = ({ params }) => {
   const [productDetails, setProductDetails] = useState({});
 
   useEffect(() => {
+    console.log('PARAMS Product: ', params)
     try {
-      if (params?.product_id) getProductById_(params?.product_id);
+      if (params?.product_id) {
+         getProductById_(params?.product_id);
+      }
     } catch (error) {
       console.log(error);
     }
   }, [params?.product_id]);
 
-  const getProductById_ = async () => {
-    await ProductApis.getProductById(params?.product_id).then((res) => {
-      console.log("Product Item: ", res.data.data);
-      setProductDetails(res?.data?.data);
-    });
+  const getProductById_ = async (id) => {
+    // await ProductApis.getProductById(params?.product_id).then((res) => {
+    //   console.log("Product Item: ", res.data.data);
+    //   setProductDetails(res?.data?.data);
+    // });
+    const product = data?.find((product) => product.id === parseInt(id));
+    if (product) {
+      console.log("Product Item: ", product);
+      setProductDetails(product);
+    } else return console.log("Product not found");
   };
 
   return (

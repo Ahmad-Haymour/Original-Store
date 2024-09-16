@@ -12,7 +12,7 @@ const ProductBanner = ({ product }) => {
       <div className="h-[200px] sm:h-[340px] flex-initial flex flex-col items-start divide-y-4 overflow-auto custom-scrollbar">
         {product &&
           product?.attributes?.gallery?.data?.map((img, index) => (
-            <Image
+            <img
               src={img?.attributes?.url}
               className="object-cover cursor-pointer grayscale hover:grayscale-0 hover:scale-90 transition-transform"
               alt="Banner"

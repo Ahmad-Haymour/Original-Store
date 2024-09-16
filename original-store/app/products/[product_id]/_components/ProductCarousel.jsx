@@ -29,7 +29,7 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
         <div
           className="object-fit relative p-4 flex justify-center rounded-lg sm:h-[340px] h-[200px] min-w-[250px] sm:w-[473px] group flex-initial mx-auto"
         >
-          <Image
+          <img
             src={gallery[currentImageIndex].attributes.url}
             className="object-cover group-hover:scale-125 hover:shadow-2xl dark:hover:shadow-xl dark:shadow-gray z-40 transition-transform duration-500 cursor-pointer h-auto w-auto rounded"
             alt="Banner_1"

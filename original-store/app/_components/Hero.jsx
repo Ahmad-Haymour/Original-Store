@@ -37,33 +37,30 @@ const Hero = () => {
 
       <div className="w-full h-full">
         <Link href={"/products"}>
-          <Image
+          <img
             src="/Sneaker-Trends.png"
             alt="Background Image"
             width={400}
             height={200}
-            objectFit="cover"
-            className="h-full w-full rounded-xl mt-10 mb-20 shadow-xl shadow-gray"
+            className="h-full w-full rounded-xl mt-10 mb-20 shadow-xl shadow-gray object-cover"
           />
         </Link>
         <Link href={"/products?brand=nike"}>
-          <Image
+          <img
             src="/nike-air-max.png"
             alt="Background Image"
             width={400}
             height={200}
-            objectFit="cover"
-            className="h-full w-full rounded-xl my-20 shadow-xl shadow-gray"
+            className="h-full w-full rounded-xl my-20 shadow-xl shadow-gray object-cover"
           />
         </Link>
         <Link href={"/products?color=white"}>
-          <Image
+          <img
             src="/weisse-sneaker.png"
             alt="Background Image"
             width={400}
             height={200}
-            objectFit="cover"
-            className="h-full w-full rounded-xl my-20 shadow-xl shadow-gray"
+            className="h-full w-full rounded-xl my-20 shadow-xl shadow-gray object-cover"
           />
         </Link>
       </div>
