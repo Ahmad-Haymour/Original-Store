@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ProductInfo = ({ product }) => {
+const ProductInfo = ( ) => {
   const [selectedSizes, setSelectedSizes] = useState([]);
 
   const handleSizeClick = (size) => {

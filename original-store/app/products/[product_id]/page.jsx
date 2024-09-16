@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-// import ProductApis from "@/app/_utils/ProductApis";
 import ProductInfo from "./_components/ProductInfo";
 import BreadCrumb from "@/app/_components/BreadCrumb";
 import ProductBanner from "./_components/ProductBanner";
