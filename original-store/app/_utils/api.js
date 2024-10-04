@@ -8,7 +8,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego/black/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego/black/img-1.webp",
           },
         },
       },
@@ -16,32 +16,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/black/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego/black/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/black/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego/black/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/black/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego/black/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/black/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego/black/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/black/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego/black/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/black/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego/black/img-6.webp",
             },
           },
         ],
@@ -57,7 +57,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego/gray/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego/gray/img-1.webp",
           },
         },
       },
@@ -65,32 +65,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego/gray/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego/gray/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego/gray/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego/gray/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego/gray/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego/gray/img-6.webp",
             },
           },
         ],
@@ -106,7 +106,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego/gray-dark/img-1.webp",
           },
         },
       },
@@ -114,32 +114,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego/gray-dark/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego/gray-dark/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego/gray-dark/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego/gray-dark/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego/gray-dark/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/gray-dark/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego/gray-dark/img-6.webp",
             },
           },
         ],
@@ -155,7 +155,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego/green/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego/green/img-1.webp",
           },
         },
       },
@@ -163,32 +163,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/green/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego/green/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/green/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego/green/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/green/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego/green/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/green/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego/green/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/green/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego/green/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/green/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego/green/img-6.webp",
             },
           },
         ],
@@ -204,7 +204,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego/white/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego/white/img-1.webp",
           },
         },
       },
@@ -212,32 +212,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego/white/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego/white/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego/white/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego/white/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego/white/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego/white/img-6.webp",
             },
           },
         ],
@@ -253,7 +253,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego/white-green/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego/white-green/img-1.webp",
           },
         },
       },
@@ -261,32 +261,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white-green/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego/white-green/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white-green/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego/white-green/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white-green/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego/white-green/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white-green/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego/white-green/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white-green/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego/white-green/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego/white-green/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego/white-green/img-6.webp",
             },
           },
         ],
@@ -302,7 +302,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego-TR/gray/img-1.webp",
           },
         },
       },
@@ -310,32 +310,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray/img-6.webp",
             },
           },
         ],
@@ -351,7 +351,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-1.webp",
+            url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-1.webp",
           },
         },
       },
@@ -359,32 +359,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-1.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-2.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-3.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-4.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-5.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Ozweego-TR/gray-braun/img-6.webp",
+              url: "/Models-List/Adidas/Ozweego-TR/gray-braun/img-6.webp",
             },
           },
         ],
@@ -400,7 +400,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Crazy/black/img-1.webp",
+            url: "/Models-List/Adidas/Crazy/black/img-1.webp",
           },
         },
       },
@@ -408,32 +408,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black/img-1.webp",
+              url: "/Models-List/Adidas/Crazy/black/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black/img-2.webp",
+              url: "/Models-List/Adidas/Crazy/black/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black/img-3.webp",
+              url: "/Models-List/Adidas/Crazy/black/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black/img-4.webp",
+              url: "/Models-List/Adidas/Crazy/black/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black/img-5.webp",
+              url: "/Models-List/Adidas/Crazy/black/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black/img-6.webp",
+              url: "/Models-List/Adidas/Crazy/black/img-6.webp",
             },
           },
         ],
@@ -449,7 +449,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Crazy/gray/img-1.webp",
+            url: "/Models-List/Adidas/Crazy/gray/img-1.webp",
           },
         },
       },
@@ -457,32 +457,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/gray/img-1.webp",
+              url: "/Models-List/Adidas/Crazy/gray/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/gray/img-7.webp",
+              url: "/Models-List/Adidas/Crazy/gray/img-7.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/gray/img-3.webp",
+              url: "/Models-List/Adidas/Crazy/gray/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/gray/img-4.webp",
+              url: "/Models-List/Adidas/Crazy/gray/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/gray/img-5.webp",
+              url: "/Models-List/Adidas/Crazy/gray/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/gray/img-6.webp",
+              url: "/Models-List/Adidas/Crazy/gray/img-6.webp",
             },
           },
         ],
@@ -498,7 +498,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Crazy/red/img-1.webp",
+            url: "/Models-List/Adidas/Crazy/red/img-1.webp",
           },
         },
       },
@@ -506,32 +506,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/red/img-1.webp",
+              url: "/Models-List/Adidas/Crazy/red/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/red/img-2.webp",
+              url: "/Models-List/Adidas/Crazy/red/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/red/img-3.webp",
+              url: "/Models-List/Adidas/Crazy/red/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/red/img-4.webp",
+              url: "/Models-List/Adidas/Crazy/red/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/red/img-5.webp",
+              url: "/Models-List/Adidas/Crazy/red/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/red/img-6.webp",
+              url: "/Models-List/Adidas/Crazy/red/img-6.webp",
             },
           },
         ],
@@ -547,7 +547,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Crazy/white-black/img-1.webp",
+            url: "/Models-List/Adidas/Crazy/white-black/img-1.webp",
           },
         },
       },
@@ -555,32 +555,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/white-black/img-1.webp",
+              url: "/Models-List/Adidas/Crazy/white-black/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/white-black/img-2.webp",
+              url: "/Models-List/Adidas/Crazy/white-black/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/white-black/img-3.webp",
+              url: "/Models-List/Adidas/Crazy/white-black/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/white-black/img-4.webp",
+              url: "/Models-List/Adidas/Crazy/white-black/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/white-black/img-5.webp",
+              url: "/Models-List/Adidas/Crazy/white-black/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/white-black/img-6.webp",
+              url: "/Models-List/Adidas/Crazy/white-black/img-6.webp",
             },
           },
         ],
@@ -596,7 +596,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Crazy/black-purple/img-1.webp",
+            url: "/Models-List/Adidas/Crazy/black-purple/img-1.webp",
           },
         },
       },
@@ -604,32 +604,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black-purple/img-1.webp",
+              url: "/Models-List/Adidas/Crazy/black-purple/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black-purple/img-2.webp",
+              url: "/Models-List/Adidas/Crazy/black-purple/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black-purple/img-3.webp",
+              url: "/Models-List/Adidas/Crazy/black-purple/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black-purple/img-4.webp",
+              url: "/Models-List/Adidas/Crazy/black-purple/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black-purple/img-5.webp",
+              url: "/Models-List/Adidas/Crazy/black-purple/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Crazy/black-purple/img-6.webp",
+              url: "/Models-List/Adidas/Crazy/black-purple/img-6.webp",
             },
           },
         ],
@@ -645,7 +645,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/black/img-1.webp",
+            url: "/Models-List/Adidas/Samba/black/img-1.webp",
           },
         },
       },
@@ -653,32 +653,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black/img-1.webp",
+              url: "/Models-List/Adidas/Samba/black/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black/img-2.webp",
+              url: "/Models-List/Adidas/Samba/black/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black/img-3.webp",
+              url: "/Models-List/Adidas/Samba/black/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black/img-4.webp",
+              url: "/Models-List/Adidas/Samba/black/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black/img-5.webp",
+              url: "/Models-List/Adidas/Samba/black/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black/img-6.webp",
+              url: "/Models-List/Adidas/Samba/black/img-6.webp",
             },
           },
         ],
@@ -694,7 +694,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/black-pink/img-1.webp",
+            url: "/Models-List/Adidas/Samba/black-pink/img-1.webp",
           },
         },
       },
@@ -702,32 +702,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-pink/img-1.webp",
+              url: "/Models-List/Adidas/Samba/black-pink/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-pink/img-2.webp",
+              url: "/Models-List/Adidas/Samba/black-pink/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-pink/img-3.webp",
+              url: "/Models-List/Adidas/Samba/black-pink/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-pink/img-4.webp",
+              url: "/Models-List/Adidas/Samba/black-pink/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-pink/img-5.webp",
+              url: "/Models-List/Adidas/Samba/black-pink/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-pink/img-6.webp",
+              url: "/Models-List/Adidas/Samba/black-pink/img-6.webp",
             },
           },
         ],
@@ -743,7 +743,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/black-white/img-1.webp",
+            url: "/Models-List/Adidas/Samba/black-white/img-1.webp",
           },
         },
       },
@@ -751,32 +751,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-white/img-1.webp",
+              url: "/Models-List/Adidas/Samba/black-white/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-white/img-2.webp",
+              url: "/Models-List/Adidas/Samba/black-white/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-white/img-3.webp",
+              url: "/Models-List/Adidas/Samba/black-white/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-white/img-4.webp",
+              url: "/Models-List/Adidas/Samba/black-white/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-white/img-5.webp",
+              url: "/Models-List/Adidas/Samba/black-white/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/black-white/img-6.webp",
+              url: "/Models-List/Adidas/Samba/black-white/img-6.webp",
             },
           },
         ],
@@ -792,7 +792,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/white/img-1.webp",
+            url: "/Models-List/Adidas/Samba/white/img-1.webp",
           },
         },
       },
@@ -800,32 +800,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white/img-1.webp",
+              url: "/Models-List/Adidas/Samba/white/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white/img-2.webp",
+              url: "/Models-List/Adidas/Samba/white/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white/img-3.webp",
+              url: "/Models-List/Adidas/Samba/white/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white/img-4.webp",
+              url: "/Models-List/Adidas/Samba/white/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white/img-5.webp",
+              url: "/Models-List/Adidas/Samba/white/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white/img-6.webp",
+              url: "/Models-List/Adidas/Samba/white/img-6.webp",
             },
           },
         ],
@@ -841,7 +841,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/white-black/img-1.webp",
+            url: "/Models-List/Adidas/Samba/white-black/img-1.webp",
           },
         },
       },
@@ -849,32 +849,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-black/img-1.webp",
+              url: "/Models-List/Adidas/Samba/white-black/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-black/img-2.webp",
+              url: "/Models-List/Adidas/Samba/white-black/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-black/img-3.webp",
+              url: "/Models-List/Adidas/Samba/white-black/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-black/img-4.webp",
+              url: "/Models-List/Adidas/Samba/white-black/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-black/img-5.webp",
+              url: "/Models-List/Adidas/Samba/white-black/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-black/img-6.webp",
+              url: "/Models-List/Adidas/Samba/white-black/img-6.webp",
             },
           },
         ],
@@ -890,7 +890,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/white-green/img-1.webp",
+            url: "/Models-List/Adidas/Samba/white-green/img-1.webp",
           },
         },
       },
@@ -898,32 +898,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-green/img-1.webp",
+              url: "/Models-List/Adidas/Samba/white-green/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-green/img-2.webp",
+              url: "/Models-List/Adidas/Samba/white-green/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-green/img-3.webp",
+              url: "/Models-List/Adidas/Samba/white-green/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-green/img-4.webp",
+              url: "/Models-List/Adidas/Samba/white-green/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-green/img-5.webp",
+              url: "/Models-List/Adidas/Samba/white-green/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-green/img-6.webp",
+              url: "/Models-List/Adidas/Samba/white-green/img-6.webp",
             },
           },
         ],
@@ -939,7 +939,7 @@ const products = [
       image: {
         data: {
           attributes: {
-            url: "/Models-List/ADIDAS/Samba/white-red/img-1.webp",
+            url: "/Models-List/Adidas/Samba/white-red/img-1.webp",
           },
         },
       },
@@ -947,32 +947,32 @@ const products = [
         data: [
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-red/img-1.webp",
+              url: "/Models-List/Adidas/Samba/white-red/img-1.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-red/img-2.webp",
+              url: "/Models-List/Adidas/Samba/white-red/img-2.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-red/img-3.webp",
+              url: "/Models-List/Adidas/Samba/white-red/img-3.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-red/img-4.webp",
+              url: "/Models-List/Adidas/Samba/white-red/img-4.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-red/img-5.webp",
+              url: "/Models-List/Adidas/Samba/white-red/img-5.webp",
             },
           },
           {
             attributes: {
-              url: "/Models-List/ADIDAS/Samba/white-red/img-6.webp",
+              url: "/Models-List/Adidas/Samba/white-red/img-6.webp",
             },
           },
         ],

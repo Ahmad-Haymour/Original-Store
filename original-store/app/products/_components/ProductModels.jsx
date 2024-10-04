@@ -21,7 +21,7 @@ const ProductModels = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <Link href={`/products?brand=${model.toLowerCase()}`}>
+              <Link href={`/products?brand=${model}`}>
                 {model}
               </Link>
             </li>
