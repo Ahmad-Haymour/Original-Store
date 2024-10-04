@@ -35,26 +35,14 @@ const ProductCarousel = ({ product, currentImageIndex, setCurrentImageIndex }) =
             layout="fill"
             objectFit="cover"
           />
-          {/* <div className="relative w-full">
-            <ChevronLeft
-              onClick={prevSlide}
-              className="hidden group-hover:block absolute top-1/2 -left-10 transition duration-500 -translate-y-1/2 rounded-full p-1 bg-black/20 text-black cursor-pointer z-40 group-hover:scale-125 size-6 md:size-8"
-
-            />
-            <ChevronRight
-              onClick={nextSlide}
-              className="hidden group-hover:block absolute top-1/2 -right-10 transition duration-500 -translate-y-1/2 rounded-full p-1 bg-black/20 text-black cursor-pointer z-40 group-hover:scale-125 size-6 md:size-8"
-
-            />
-          </div> */}
               <div className="absolute top-1/2 w-full flex justify-between transform -translate-y-1/2">
                   <ChevronLeft
                     onClick={prevSlide}
-                    className="hidden group-hover:block transition duration-500 cursor-pointer left-4 bg-black/30 rounded-full p-2"
+                    className="hidden group-hover:block transition duration-500 cursor-pointer left-4 bg-black/30 rounded-full p-2 size-10 md:size-12"
                   />
                   <ChevronRight
                     onClick={nextSlide}
-                    className="hidden group-hover:block transition duration-500 cursor-pointer right-4 bg-black/30 rounded-full p-2"
+                    className="hidden group-hover:block transition duration-500 cursor-pointer right-4 bg-black/30 rounded-full p-2 size-10 md:size-12"
                   />
               </div>
         </div>
