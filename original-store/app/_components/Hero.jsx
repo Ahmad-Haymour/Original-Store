@@ -44,7 +44,7 @@ const Hero = () => {
             className="h-full w-full rounded-xl mt-10 mb-20 shadow-xl shadow-gray object-cover"
           />
         </Link>
-        <Link href={"/products?brand=nike"}>
+        <Link href={"/products?brand=Nike"}>
           <img
             src="/nike-air-max.png"
             alt="Background Image"
